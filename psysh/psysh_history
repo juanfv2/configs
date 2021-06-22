@@ -1,0 +1,15 @@
+_HiStOrY_V2_
+$converted\040=\040Str::of('fooBar\040mamá')->snake();
+$string\040=\040Str::of('fooBar\040mamá')->ascii()->snake();
+$string\040=\040Str::of('fooBar\040mamá\040.csv')->ascii()->snake();
+$string\040=\040Str::of("Y\040VEGETALES\040SA"")->ascii();
+$string\040=\040Str::of("Y\040VEGETALES\040SA\134"")->ascii();
+$string\040=\040Str::of('Y\040VEGETALES\040SA"')->ascii();
+q
+q
+Str::isAscii("INDNOV\040INDUSTRIAS\040NOVOA\040COX\040SOCIEDAD\040AN�NIMA");
+Str::ascii("INDNOV\040INDUSTRIAS\040NOVOA\040COX\040SOCIEDAD\040AN�NIMA");
+mb_detect_encoding("INDNOV\040INDUSTRIAS\040NOVOA\040COX\040SOCIEDAD\040AN�NIMA");
+mb_detect_encoding("INDNOV\040INDUSTRIAS\040NOVOA\040COX\040SOCIEDAD\040AN�NIMA");
+1
+q

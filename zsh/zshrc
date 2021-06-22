@@ -1,0 +1,35 @@
+# zsh config dir
+export ZDOTDIR=$HOME/.config/zsh
+
+# Useful Functions
+source "$ZDOTDIR/functions"
+
+zsh_add_file "alias"
+zsh_add_file "prompt"
+
+# Plugins
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="/opt/local/bin:$PATH"
+export PATH="/opt/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+# mysql
+export PATH="/usr/local/mysql/bin:$PATH"
+# android
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+# Laravel
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+# maven
+export PATH="$HOME/workspace/_.libs/apache-maven-3.5.0/bin:$PATH"
+# flutter
+export PATH="$HOME/flutter/bin:$PATH"
+
+# The original version is saved in .bash_profile.pysave
+export PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH"
