@@ -1,5 +1,4 @@
-# zsh config dir
-export ZDOTDIR=$HOME/.config/zsh
+#!/bin/zsh
 
 # Useful Functions
 source "$ZDOTDIR/functions"

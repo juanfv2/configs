@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # lista
 
 alias l='ls -alh'
