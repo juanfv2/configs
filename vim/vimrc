@@ -1,0 +1,7 @@
+
+source $ZVIMDIR/plugins.vim
+source $ZVIMDIR/settings.vim
+source $ZVIMDIR/configs/coc.vim
+source $ZVIMDIR/configs/nerdtree.vim
+source $ZVIMDIR/configs/startify.vim
+" source "plugins.vim"
