@@ -2,7 +2,8 @@ let mapleader = " "
 
 inoremap jj <Esc>
 nnoremap <silent><nowait> j1 :NERDTreeToggle<CR>
-nnoremap <silent><nowait> j2 :set rnu!<CR>
+nnoremap <silent><nowait> j2 :Files<CR>
+nnoremap <silent><nowait> j3 :set rnu!<CR>
 nnoremap <silent><nowait> ya :%y<CR>
 nnoremap <silent><nowait> da :%d<CR>
 nnoremap <silent><nowait> ra ggVGp<CR>
