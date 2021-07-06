@@ -1,7 +1,10 @@
 
 source $ZVIMDIR/plugins.vim
 source $ZVIMDIR/settings.vim
+source $ZVIMDIR/keymappings.vim
 source $ZVIMDIR/configs/coc.vim
 source $ZVIMDIR/configs/nerdtree.vim
 source $ZVIMDIR/configs/startify.vim
+source $ZVIMDIR/configs/airline.vim
+source $ZVIMDIR/configs/fzf.vim
 " source "plugins.vim"
