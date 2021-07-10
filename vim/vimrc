@@ -8,4 +8,6 @@ source $ZVIMDIR/configs/fzf.vim
 source $ZVIMDIR/configs/gitgutter.vim
 source $ZVIMDIR/configs/nerdtree.vim
 source $ZVIMDIR/configs/startify.vim
+source $ZVIMDIR/configs/fugitive.vim
+source $ZVIMDIR/configs/netrw.vim
 " source "plugins.vim"

@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Useful Functions
-source "$ZDOTDIR/functions"
+source "$ZSHDIR/functions"
 
 zsh_add_file "alias"
 zsh_add_file "prompt"

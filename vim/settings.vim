@@ -1,4 +1,4 @@
-" "" General"" General
+" ""General"" General
 set number              " Show line numbers
 set relativenumber      " Show relative numbers
 set linebreak           " Break lines at word (requires Wrap lines)
@@ -6,6 +6,7 @@ set showbreak=+++       " Wrap-broken line prefix
 set textwidth=100       " Line wrap (number of cols)
 set showmatch           " Highlight matching brace
 set spell               " Enable spell-checking
+set spelllang=en,es
 set visualbell          " Use visual bell (no beeping)
 
 set hlsearch            " Highlight all search results
@@ -29,6 +30,11 @@ set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
 
+set termguicolors
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
+
 set t_Co=256
 set showtabline=2                       " Always show tabs
 set nobackup                            " This is recommended by coc
@@ -40,7 +46,7 @@ set backspace=indent,eol,start          " Backspace behaviour
 set mouse="a"                           " Enable your mouse
 set clipboard="unnamedplus"             " Copy paste between vim and everything else
 set cmdheight=2                         " More space for displaying messages
-set iskeyword+=-                      	" treat dash separated words as a word text object
+set iskeyword+=-                        " treat dash separated words as a word text object
 set bg=dark
 
 colorscheme gruvbox
