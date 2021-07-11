@@ -23,7 +23,7 @@ set smarttab            " Enable smart-tabs
 set softtabstop=4       " Number of spaces per Tab
 
 " "" Advanced
-set ruler               " Show row and column ruler information
+set ruler                               " Show row and column ruler information
 set autowriteall                        " Auto-write all file changes
 
 set encoding=utf-8                      " The encoding displayed
@@ -42,10 +42,10 @@ set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set undolevels=1000                     " Number of undo levels
-set backspace=indent,eol,start          " Backspace behaviour
+set backspace=indent,eol,start          " Backspace Behavior
 set mouse="a"                           " Enable your mouse
-set clipboard="unnamedplus"             " Copy paste between vim and everything else
-set cmdheight=2                         " More space for displaying messages
+set clipboard=unnamed                   " Copy paste between vim and everything else
+set cmdheight=1                         " More space for displaying messages
 set iskeyword+=-                        " treat dash separated words as a word text object
 set bg=dark
 
