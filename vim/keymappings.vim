@@ -1,7 +1,7 @@
 let mapleader = " "
 
 inoremap jj <Esc>
-nnoremap <silent><nowait> j0 :Startify<CR>
+nnoremap <silent><nowait> jº :Startify<CR>
 nnoremap <silent><nowait> j1 :call ToggleNetrw()<CR>
 nnoremap <silent><nowait> j2 :Files<CR>
 nnoremap <silent><nowait> j3 :set rnu!<CR>
@@ -23,5 +23,3 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-
