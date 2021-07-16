@@ -6,3 +6,14 @@ source $ZVIMDIR/keymappings.vim
 for f in split(glob($ZVIMDIR .'/configs/*.vim'), '\n')
     exe 'source' f
 endfor
+
+" links
+
+""" netrw """
+" https://gist.github.com/danidiaz/37a69305e2ed3319bfff9631175c5d0f
+
+""" fugitive """
+" https://gist.github.com/mikaelz/38600d22b716b39b031165cd6d201a67
+
+""" surround """
+" https://cheatography.com/mutanclan/cheat-sheets/vim-tpope-vim-surround/
