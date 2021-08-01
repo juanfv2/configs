@@ -11,11 +11,6 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 
-" augroup ProjectDrawer
-"   autocmd!
-"   autocmd VimEnter * :Vexplore
-" augroup END
-
 augroup ProjectDrawer
     autocmd!
     autocmd VimEnter * if argc() == 0 | Explore! | endif
@@ -39,16 +34,3 @@ function! ToggleNetrw()
     endif
 endfunction
 
-" open file vertically to the right
-augroup netrw_mappings
-    autocmd!
-    autocmd filetype netrw call Netrw_mappings()
-augroup END
-function! OpenToRight()
-  :rightbelow vnew
-  :wincmd p
-  :normal P
-endfunction
-function! Netrw_mappings()
-    noremap V :call OpenToRight()<cr>
-endfunction
