@@ -8,7 +8,7 @@ set showbreak=+++       " Wrap-broken line prefix
 set textwidth=100       " Line wrap (number of cols)
 set showmatch           " Highlight matching brace
 set spell               " Enable spell-checking
-set spelllang=en,es
+" set spelllang=en,es
 set visualbell          " Use visual bell (no beeping)
 
 set ignorecase          " Always case-insensitive
@@ -32,7 +32,7 @@ set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
 
-set termguicolors
+" set termguicolors
 set noswapfile
 set undodir=~/.vim/undodir
 set undofile
@@ -49,6 +49,6 @@ set mouse=a                             " Enable your mouse
 set clipboard=unnamed                   " Copy paste between vim and everything else
 set cmdheight=1                         " More space for displaying messages
 set iskeyword+=-                        " treat dash separated words as a word text object
-set bg=dark
+" set bg=dark
 
 colorscheme gruvbox
