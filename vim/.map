@@ -1,0 +1,284 @@
+n  <Space>hp    @<Plug>(GitGutterPreviewHunk)
+x  <Space>hs    @<Plug>(GitGutterStageHunk)
+v  ["          *@:<C-U>exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")<CR>
+n  ["          *@:call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")<CR>
+v  []          *@m':<C-U>exe "normal! gv"|call search('^\s*end\(f\%[unction]\|def\)\>', "bW")<CR>
+n  []          *@m':call search('^\s*end\(f\%[unction]\|def\)\>', "bW")<CR>
+v  [[          *@m':<C-U>exe "normal! gv"|call search('^\s*\(fu\%[nction]\|def\)\>', "bW")<CR>
+n  [[          *@m':call search('^\s*\(fu\%[nction]\|def\)\>', "bW")<CR>
+v  ]"          *@:<C-U>exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")<CR>
+n  ]"          *@:call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")<CR>
+v  ][          *@m':<C-U>exe "normal! gv"|call search('^\s*end\(f\%[unction]\|def\)\>', "W")<CR>
+n  ][          *@m':call search('^\s*end\(f\%[unction]\|def\)\>', "W")<CR>
+v  ]]          *@m':<C-U>exe "normal! gv"|call search('^\s*\(fu\%[nction]\|def\)\>', "W")<CR>
+n  ]]          *@m':call search('^\s*\(fu\%[nction]\|def\)\>', "W")<CR>
+n  <Tab>       * :bnext<CR>              <Space>
+n  <Space>     * :WhichKey ' '<CR>
+n  <Space>gs     :G<CR>
+n  <Space>gu     :diffget //2<CR>
+n  <Space>gh     :diffget //3<CR>
+n  <Space>grom * :Git rebase origin/master<CR>
+n  <Space>grum * :Git rebase upstream/master<CR>
+n  <Space>ga   * :Git fetch --all<CR>
+n  <Space>p    * :<C-U>CocListResume<CR>
+n  <Space>k    * :<C-U>CocPrev<CR>
+n  <Space>j    * :<C-U>CocNext<CR>
+n  <Space>s    * :<C-U>CocList -I symbols<CR>
+n  <Space>o    * :<C-U>CocList outline<CR>
+n  <Space>c    * :<C-U>CocList commands<CR>
+n  <Space>e    * :<C-U>CocList extensions<CR>
+n  <Space>qf     <Plug>(coc-fix-current)
+n  <Space>ac     <Plug>(coc-codeaction)
+n  <Space>a    * :<C-U>CocList diagnostics<CR>
+x  <Space>a      <Plug>(coc-codeaction-selected)
+x  <Space>f      <Plug>(coc-format-selected)
+n  <Space>rn     <Plug>(coc-rename)
+n  <Space>f      <Plug>(coc-format-selected)
+n  <Space>ñ    * :Startify<CR>
+n  <Space>q    * :q<CR>
+n  <Space>w    * :w<CR>
+n  <Space><Space> * :w<CR>
+n  J           * mzJ`z
+n  K           * :call <SNR>18_show_documentation()<CR>
+n  N           * Nzzzv
+x  S             <Plug>VSurround
+n  Y           * y$
+v  YY          * y`>pgv
+n  YY          * yyp
+n  [h            <Plug>(GitGutterPrevHunk) "same as default
+n  ]h            <Plug>(GitGutterNextHunk) "same as default
+o  ac            <Plug>(coc-classobj-a)
+x  ac            <Plug>(coc-classobj-a)
+o  af            <Plug>(coc-funcobj-a)
+x  af            <Plug>(coc-funcobj-a)
+n  cS            <Plug>CSurround
+n  cs            <Plug>Csurround
+n  ds            <Plug>Dsurround
+n  da          * :%d<CR>
+n  fd          * :Format<CR>
+v  gx            <Plug>NetrwBrowseXVis
+n  gx            <Plug>NetrwBrowseX
+n  gcu           <Plug>Commentary<Plug>Commentary
+n  gcc           <Plug>CommentaryLine
+o  gc            <Plug>Commentary
+n  gc            <Plug>Commentary
+x  gc            <Plug>Commentary
+x  gS            <Plug>VgSurround
+n  ghu           <Plug>(GitGutterUndoHunk)
+n  ghs           <Plug>(GitGutterStageHunk)
+n  gr            <Plug>(coc-references)
+n  gi            <Plug>(coc-implementation)
+n  gy            <Plug>(coc-type-definition)
+n  gd            <Plug>(coc-definition)
+o  ic            <Plug>(coc-classobj-i)
+x  ic            <Plug>(coc-classobj-i)
+o  if            <Plug>(coc-funcobj-i)
+x  if            <Plug>(coc-funcobj-i)
+n  j           * (v:count > 5 ? "m'" . v:count : "") . 'j'
+n  j3          * :set rnu!<CR>
+n  j2          * :Files<CR>
+n  j1          * :call ToggleNetrw()<CR>
+n  jº          * :Startify<CR>
+n  k           * (v:count > 5 ? "m'" . v:count : "") . 'k'
+n  nd            <Plug>(coc-diagnostic-prev)
+n  n           * nzzzv
+n  pd            <Plug>(coc-diagnostic-next)
+n  ra          * ggVGp<CR>
+n  t1          * :call <SNR>25_ToggleTerminal('J', 15)<CR>
+n  y<C-G>      & :<C-U>call setreg(v:register, fugitive#Object(@%))<CR>
+n  ySS           <Plug>YSsurround
+n  ySs           <Plug>YSsurround
+n  yss           <Plug>Yssurround
+n  yS            <Plug>YSurround
+n  ys            <Plug>Ysurround
+n  ya          * :%y<CR>
+n  <SNR>104_:  * :<C-U><C-R>=v:count ? v:count : ''<CR>
+v  <Plug>(coc-translator-rv) * :<C-U>call coc#rpc#notify('doKeymap', ['translator-rv'])<CR>
+n  <Plug>(coc-translator-r) * :<C-U>call coc#rpc#notify('doKeymap', ['translator-r'])<CR>
+v  <Plug>(coc-translator-ev) * :<C-U>call coc#rpc#notify('doKeymap', ['translator-ev'])<CR>
+n  <Plug>(coc-translator-e) * :<C-U>call coc#rpc#notify('doKeymap', ['translator-e'])<CR>
+v  <Plug>(coc-translator-pv) * :<C-U>call coc#rpc#notify('doKeymap', ['translator-pv'])<CR>
+n  <Plug>(coc-translator-p) * :<C-U>call coc#rpc#notify('doKeymap', ['translator-p'])<CR>
+v  <Plug>(coc-snippets-select) * :<C-U>call coc#rpc#notify('doKeymap', ['snippets-select'])<CR>
+x  <Plug>(coc-convert-snippet) * :<C-U>call coc#rpc#notify('doKeymap', ['convert-snippet'])<CR>
+x  <Plug>(coc-git-chunk-outer) * :<C-U>call coc#rpc#request('doKeymap', ['git-chunk-outer'])<CR>
+o  <Plug>(coc-git-chunk-outer) * :<C-U>call coc#rpc#request('doKeymap', ['git-chunk-outer'])<CR>
+x  <Plug>(coc-git-chunk-inner) * :<C-U>call coc#rpc#request('doKeymap', ['git-chunk-inner'])<CR>
+o  <Plug>(coc-git-chunk-inner) * :<C-U>call coc#rpc#request('doKeymap', ['git-chunk-inner'])<CR>
+n  <Plug>(coc-git-commit) * :<C-U>call coc#rpc#notify('doKeymap', ['git-commit'])<CR>
+n  <Plug>(coc-git-chunkinfo) * :<C-U>call coc#rpc#notify('doKeymap', ['git-chunkinfo'])<CR>
+n  <Plug>(coc-git-keepboth) * :<C-U>call coc#rpc#notify('doKeymap', ['git-keepboth'])<CR>
+n  <Plug>(coc-git-keepincoming) * :<C-U>call coc#rpc#notify('doKeymap', ['git-keepincoming'])<CR>
+n  <Plug>(coc-git-keepcurrent) * :<C-U>call coc#rpc#notify('doKeymap', ['git-keepcurrent'])<CR>
+n  <Plug>(coc-git-prevconflict) * :<C-U>call coc#rpc#notify('doKeymap', ['git-prevconflict'])<CR>
+n  <Plug>(coc-git-nextconflict) * :<C-U>call coc#rpc#notify('doKeymap', ['git-nextconflict'])<CR>
+n  <Plug>(coc-git-prevchunk) * :<C-U>call coc#rpc#notify('doKeymap', ['git-prevchunk'])<CR>
+n  <Plug>(coc-git-nextchunk) * :<C-U>call coc#rpc#notify('doKeymap', ['git-nextchunk'])<CR>
+   <Plug>AirlineSelectNextTab * :<C-U>call <SNR>76_jump_to_tab(v:count1)<CR>
+   <Plug>AirlineSelectPrevTab * :<C-U>call <SNR>76_jump_to_tab(-v:count1)<CR>
+   <Plug>AirlineSelectTab0 * :call <SNR>76_select_tab(9)<CR>
+   <Plug>AirlineSelectTab9 * :call <SNR>76_select_tab(8)<CR>
+   <Plug>AirlineSelectTab8 * :call <SNR>76_select_tab(7)<CR>
+   <Plug>AirlineSelectTab7 * :call <SNR>76_select_tab(6)<CR>
+   <Plug>AirlineSelectTab6 * :call <SNR>76_select_tab(5)<CR>
+   <Plug>AirlineSelectTab5 * :call <SNR>76_select_tab(4)<CR>
+   <Plug>AirlineSelectTab4 * :call <SNR>76_select_tab(3)<CR>
+   <Plug>AirlineSelectTab3 * :call <SNR>76_select_tab(2)<CR>
+   <Plug>AirlineSelectTab2 * :call <SNR>76_select_tab(1)<CR>
+   <Plug>AirlineSelectTab1 * :call <SNR>76_select_tab(0)<CR>
+v  <Plug>NetrwBrowseXVis * :<C-U>call netrw#BrowseXVis()<CR>
+n  <Plug>NetrwBrowseX * :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))<CR>
+n  <Plug>CommentaryUndo   :echoerr "Change your <Plug>CommentaryUndo map to <Plug>Commentary<Plug>Commentary"<CR>
+n  <Plug>ChangeCommentary * c:<C-U>call <SNR>45_textobject(1)<CR>
+o  <Plug>Commentary * :<C-U>call <SNR>45_textobject(get(v:, 'operator', '') ==# 'c')<CR>
+n  <Plug>CommentaryLine * <SNR>45_go() . '_'
+n  <Plug>Commentary * <SNR>45_go()
+x  <Plug>Commentary * <SNR>45_go()
+v  <Plug>VgSurround * :<C-U>call <SNR>43_opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>
+v  <Plug>VSurround * :<C-U>call <SNR>43_opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>
+n  <Plug>YSurround * <SNR>43_opfunc2('setup')
+n  <Plug>Ysurround * <SNR>43_opfunc('setup')
+n  <Plug>YSsurround * <SNR>43_opfunc2('setup').'_'
+n  <Plug>Yssurround * '^'.v:count1.<SNR>43_opfunc('setup').'g_'
+n  <Plug>CSurround * :<C-U>call <SNR>43_changesurround(1)<CR>
+n  <Plug>Csurround * :<C-U>call <SNR>43_changesurround()<CR>
+n  <Plug>Dsurround * :<C-U>call <SNR>43_dosurround(<SNR>43_inputtarget())<CR>
+n  <Plug>SurroundRepeat * .
+n  <Plug>GitGutterPreviewHunk * :call gitgutter#utility#warn('Please change your map <Plug>GitGutterPreviewHunk to <Plug>(GitGutterPreviewHunk)')<CR>
+n  <Plug>(GitGutterPreviewHunk) * :GitGutterPreviewHunk<CR>
+n  <Plug>GitGutterUndoHunk * :call gitgutter#utility#warn('Please change your map <Plug>GitGutterUndoHunk to <Plug>(GitGutterUndoHunk)')<CR>
+n  <Plug>(GitGutterUndoHunk) * :GitGutterUndoHunk<CR>
+n  <Plug>GitGutterStageHunk * :call gitgutter#utility#warn('Please change your map <Plug>GitGutterStageHunk to <Plug>(GitGutterStageHunk)')<CR>
+n  <Plug>(GitGutterStageHunk) * :GitGutterStageHunk<CR>
+x  <Plug>GitGutterStageHunk * :call gitgutter#utility#warn('Please change your map <Plug>GitGutterStageHunk to <Plug>(GitGutterStageHunk)')<CR>
+x  <Plug>(GitGutterStageHunk) * :GitGutterStageHunk<CR>
+n  <Plug>GitGutterPrevHunk * &diff ? '[c' : ":\<C-U>call gitgutter#utility#warn('Please change your map \<Plug>GitGutterPrevHunk to \<Plug>(GitGutterPrevHunk)')\<CR>"
+n  <Plug>(GitGutterPrevHunk) * &diff ? '[c' : ":\<C-U>execute v:count1 . 'GitGutterPrevHunk'\<CR>"
+n  <Plug>GitGutterNextHunk * &diff ? ']c' : ":\<C-U>call gitgutter#utility#warn('Please change your map \<Plug>GitGutterNextHunk to \<Plug>(GitGutterNextHunk)')\<CR>"
+n  <Plug>(GitGutterNextHunk) * &diff ? ']c' : ":\<C-U>execute v:count1 . 'GitGutterNextHunk'\<CR>"
+x  <Plug>(GitGutterTextObjectOuterVisual) * :<C-U>call gitgutter#hunk#text_object(0)<CR>
+x  <Plug>(GitGutterTextObjectInnerVisual) * :<C-U>call gitgutter#hunk#text_object(1)<CR>
+o  <Plug>(GitGutterTextObjectOuterPending) * :<C-U>call gitgutter#hunk#text_object(0)<CR>
+o  <Plug>(GitGutterTextObjectInnerPending) * :<C-U>call gitgutter#hunk#text_object(1)<CR>
+o  <Plug>(coc-classobj-a) * :<C-U>call coc#rpc#request('selectSymbolRange', [v:false, '', ['Interface', 'Struct', 'Class']])<CR>
+o  <Plug>(coc-classobj-i) * :<C-U>call coc#rpc#request('selectSymbolRange', [v:true, '', ['Interface', 'Struct', 'Class']])<CR>
+v  <Plug>(coc-classobj-a) * :<C-U>call coc#rpc#request('selectSymbolRange', [v:false, visualmode(), ['Interface', 'Struct', 'Class']])<CR>
+v  <Plug>(coc-classobj-i) * :<C-U>call coc#rpc#request('selectSymbolRange', [v:true, visualmode(), ['Interface', 'Struct', 'Class']])<CR>
+o  <Plug>(coc-funcobj-a) * :<C-U>call coc#rpc#request('selectSymbolRange', [v:false, '', ['Method', 'Function']])<CR>
+o  <Plug>(coc-funcobj-i) * :<C-U>call coc#rpc#request('selectSymbolRange', [v:true, '', ['Method', 'Function']])<CR>
+v  <Plug>(coc-funcobj-a) * :<C-U>call coc#rpc#request('selectSymbolRange', [v:false, visualmode(), ['Method', 'Function']])<CR>
+v  <Plug>(coc-funcobj-i) * :<C-U>call coc#rpc#request('selectSymbolRange', [v:true, visualmode(), ['Method', 'Function']])<CR>
+n  <Plug>(coc-cursors-position) * :<C-U>call coc#rpc#request('cursorsSelect', [bufnr('%'), 'position', 'n'])<CR>
+n  <Plug>(coc-cursors-word) * :<C-U>call coc#rpc#request('cursorsSelect', [bufnr('%'), 'word', 'n'])<CR>
+v  <Plug>(coc-cursors-range) * :<C-U>call coc#rpc#request('cursorsSelect', [bufnr('%'), 'range', visualmode()])<CR>
+n  <Plug>(coc-cursors-operator) * :<C-U>set operatorfunc=<SNR>30_CursorRangeFromSelected<CR>g@
+n  <Plug>(coc-refactor) * :<C-U>call       CocActionAsync('refactor')<CR>
+n  <Plug>(coc-command-repeat) * :<C-U>call       CocAction('repeatCommand')<CR>
+n  <Plug>(coc-float-jump) * :<C-U>call       coc#float#jump()<CR>
+n  <Plug>(coc-float-hide) * :<C-U>call       coc#float#close_all()<CR>
+n  <Plug>(coc-fix-current) * :<C-U>call       CocActionAsync('doQuickfix')<CR>
+n  <Plug>(coc-openlink) * :<C-U>call       CocActionAsync('openLink')<CR>
+n  <Plug>(coc-references-used) * :<C-U>call       CocActionAsync('jumpUsed')<CR>
+n  <Plug>(coc-references) * :<C-U>call       CocActionAsync('jumpReferences')<CR>
+n  <Plug>(coc-type-definition) * :<C-U>call       CocActionAsync('jumpTypeDefinition')<CR>
+n  <Plug>(coc-implementation) * :<C-U>call       CocActionAsync('jumpImplementation')<CR>
+n  <Plug>(coc-declaration) * :<C-U>call       CocActionAsync('jumpDeclaration')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-diagnostic-prev-error) * :<C-U>call       CocActionAsync('diagnosticPrevious', 'error')<CR>
+n  <Plug>(coc-diagnostic-next-error) * :<C-U>call       CocActionAsync('diagnosticNext',     'error')<CR>
+n  <Plug>(coc-diagnostic-prev) * :<C-U>call       CocActionAsync('diagnosticPrevious')<CR>
+n  <Plug>(coc-diagnostic-next) * :<C-U>call       CocActionAsync('diagnosticNext')<CR>
+n  <Plug>(coc-diagnostic-info) * :<C-U>call       CocActionAsync('diagnosticInfo')<CR>
+n  <Plug>(coc-format) * :<C-U>call       CocActionAsync('format')<CR>
+n  <Plug>(coc-format-selected) * :<C-U>set        operatorfunc=<SNR>30_FormatFromSelected<CR>g@
+n  <Plug>(coc-rename) * :<C-U>call       CocActionAsync('rename')<CR>
+n  <Plug>(coc-codeaction-cursor) * :<C-U>call       CocActionAsync('codeAction',         'cursor')<CR>
+n  <Plug>(coc-codeaction-line) * :<C-U>call       CocActionAsync('codeAction',         'line')<CR>
+n  <Plug>(coc-codeaction) * :<C-U>call       CocActionAsync('codeAction',         '')<CR>
+n  <Plug>(coc-codeaction-selected) * :<C-U>set        operatorfunc=<SNR>30_CodeActionFromSelected<CR>g@
+v  <Plug>(coc-codeaction-selected) * :<C-U>call       CocActionAsync('codeAction',         visualmode())<CR>
+v  <Plug>(coc-format-selected) * :<C-U>call       CocActionAsync('formatSelected',     visualmode())<CR>
+n  <Plug>(coc-codelens-action) * :<C-U>call       CocActionAsync('codeLensAction')<CR>
+n  <Plug>(coc-range-select) * :<C-U>call       CocActionAsync('rangeSelect',     '', v:true)<CR>
+v  <Plug>(coc-range-select-backward) * :<C-U>call       CocActionAsync('rangeSelect',     visualmode(), v:false)<CR>
+v  <Plug>(coc-range-select) * :<C-U>call       CocActionAsync('rangeSelect',     visualmode(), v:true)<CR>
+n  <Plug>(startify-open-buffers) * :<C-U>call startify#open_buffers()<CR>
+o  <Plug>(fzf-maps-o) * <C-C>:<C-U>call fzf#vim#maps('o', 0)<CR>
+x  <Plug>(fzf-maps-x) * :<C-U>call fzf#vim#maps('x', 0)<CR>
+n  <Plug>(fzf-maps-n) * :<C-U>call fzf#vim#maps('n', 0)<CR>
+n  <Plug>(fzf-normal) * <Nop>
+n  <Plug>(fzf-insert) * i
+x  <C-S>         <Plug>(coc-range-select)
+n  <C-S>         <Plug>(coc-range-select)
+v  <C-B>       * coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
+v  <C-F>       * coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
+n  <C-B>       * coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
+n  <C-F>       * coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
+n  <C-L>       * <C-W>l
+n  <C-K>       * <C-W>k
+n  <C-J>       * <C-W>j
+n  <C-H>       * <C-W>h
+n  <S-Tab>     * :bprevious<CR>        <Space>
+v  <BS>          "-d
+v  <D-x>         "*d
+v  <D-c>         "*y
+v  <D-v>         "-d"*P
+n  <D-v>         "*P
+v  §           * :m '<-2<CR>gv=gv
+v  ¶           * :m '>+1<CR>gv=gv
+n  §           * :m .-2<CR>==
+n  ¶           * :m .+1<CR>==
+
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocActionAsync('jumpDefinition')<CR>
+n  <Plug>(coc-diagnostic-prev-error) * :<C-U>call       CocActionAsync('diagnosticPrevious', 'error')<CR>
+n  <Plug>(coc-diagnostic-next-error) * :<C-U>call       CocActionAsync('diagnosticNext',     'error')<CR>
+n  <Plug>(coc-diagnostic-prev) * :<C-U>call       CocActionAsync('diagnosticPrevious')<CR>
+n  <Plug>(coc-diagnostic-next) * :<C-U>call       CocActionAsync('diagnosticNext')<CR>
+n  <Plug>(coc-diagnostic-info) * :<C-U>call       CocActionAsync('diagnosticInfo')<CR>
+n  <Plug>(coc-format) * :<C-U>call       CocActionAsync('format')<CR>
+n  <Plug>(coc-format-selected) * :<C-U>set        operatorfunc=<SNR>30_FormatFromSelected<CR>g@
+n  <Plug>(coc-rename) * :<C-U>call       CocActionAsync('rename')<CR>
+n  <Plug>(coc-codeaction-cursor) * :<C-U>call       CocActionAsync('codeAction',         'cursor')<CR>
+n  <Plug>(coc-codeaction-line) * :<C-U>call       CocActionAsync('codeAction',         'line')<CR>
+n  <Plug>(coc-codeaction) * :<C-U>call       CocActionAsync('codeAction',         '')<CR>
+n  <Plug>(coc-codeaction-selected) * :<C-U>set        operatorfunc=<SNR>30_CodeActionFromSelected<CR>g@
+v  <Plug>(coc-codeaction-selected) * :<C-U>call       CocActionAsync('codeAction',         visualmode())<CR>
+v  <Plug>(coc-format-selected) * :<C-U>call       CocActionAsync('formatSelected',     visualmode())<CR>
+n  <Plug>(coc-codelens-action) * :<C-U>call       CocActionAsync('codeLensAction')<CR>
+n  <Plug>(coc-range-select) * :<C-U>call       CocActionAsync('rangeSelect',     '', v:true)<CR>
+v  <Plug>(coc-range-select-backward) * :<C-U>call       CocActionAsync('rangeSelect',     visualmode(), v:false)<CR>
+v  <Plug>(coc-range-select) * :<C-U>call       CocActionAsync('rangeSelect',     visualmode(), v:true)<CR>
+n  <Plug>(startify-open-buffers) * :<C-U>call startify#open_buffers()<CR>
+o  <Plug>(fzf-maps-o) * <C-C>:<C-U>call fzf#vim#maps('o', 0)<CR>
+x  <Plug>(fzf-maps-x) * :<C-U>call fzf#vim#maps('x', 0)<CR>
+n  <Plug>(fzf-maps-n) * :<C-U>call fzf#vim#maps('n', 0)<CR>
+n  <Plug>(fzf-normal) * <Nop>
+n  <Plug>(fzf-insert) * i
+x  <C-S>         <Plug>(coc-range-select)
+n  <C-S>         <Plug>(coc-range-select)
+v  <C-B>       * coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
+v  <C-F>       * coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
+n  <C-B>       * coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
+n  <C-F>       * coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
+n  <C-L>       * <C-W>l
+n  <C-K>       * <C-W>k
+n  <C-J>       * <C-W>j
+n  <C-H>       * <C-W>h
+n  <S-Tab>     * :bprevious<CR>        <Space>
+v  <BS>          "-d
+v  <D-x>         "*d
+v  <D-c>         "*y
+v  <D-v>         "-d"*P
+n  <D-v>         "*P
+v  §           * :m '<-2<CR>gv=gv
+v  ¶           * :m '>+1<CR>gv=gv
+n  §           * :m .-2<CR>==
+n  ¶           * :m .+1<CR>==
