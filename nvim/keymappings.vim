@@ -13,7 +13,7 @@ nnoremap <leader><leader> :w<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>ñ :Startify<CR>
-nnoremap <leader>f :Files<CR>
+nnoremap <leader>f :lua require'telescope.builtin'.find_files{}<CR>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>               
