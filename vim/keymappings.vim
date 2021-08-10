@@ -16,9 +16,9 @@ nnoremap <leader>ñ :Startify<CR>
 nnoremap <leader>f :Files<CR>
 
 " TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>               
+nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>         
+nnoremap <S-TAB> :bprevious<CR>
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
@@ -56,3 +56,5 @@ inoremap § <Esc>:m .-2<CR>==gi
 vnoremap ¶ :m '>+1<CR>gv=gv
 vnoremap § :m '<-2<CR>gv=gv
 
+inoremap <leader>, <C-O>A; <ESC>
+nnoremap <leader>, $A; <ESC>
