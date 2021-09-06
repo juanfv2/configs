@@ -49,6 +49,7 @@ nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
  
 " #1: Move text
+"   
 nnoremap ¶ :m .+1<CR>==
 nnoremap § :m .-2<CR>==
 inoremap ¶ <Esc>:m .+1<CR>==gi
