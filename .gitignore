@@ -3,3 +3,5 @@ zsh/.zsh_history
 coc
 zsh/.zsh_sessions
 *.swp
+configstore
+psysh
