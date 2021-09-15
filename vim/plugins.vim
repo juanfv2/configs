@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'yaegassy/coc-intelephense'
     Plug 'arnaud-lb/vim-php-namespace'
-    
+    Plug 'editorconfig/editorconfig-vim'   
     " git:
     Plug 'airblade/vim-gitgutter'
     
