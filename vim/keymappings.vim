@@ -4,7 +4,8 @@ inoremap jj <Esc>
 nnoremap <silent><nowait> jº :Startify<CR>
 nnoremap <silent><nowait> j1 :call ToggleNetrw()<CR>
 nnoremap <silent><nowait> j2 :Files<CR>
-nnoremap <silent><nowait> j3 :set rnu!<CR>
+nnoremap <silent><nowait> j3 :Rg<CR>
+nnoremap <silent><nowait> f0 :set rnu!<CR>
 nnoremap <silent><nowait> ya :%y<CR>
 nnoremap <silent><nowait> da :%d<CR>
 nnoremap <silent><nowait> ra ggVGp<CR>
@@ -48,7 +49,11 @@ inoremap ? ?<c-g>u
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
  
+" <alt>j ¶
+" <alt>k §
+"
 " #1: Move text
+"
 "   
 nnoremap ¶ :m .+1<CR>==
 nnoremap § :m .-2<CR>==
