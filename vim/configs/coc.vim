@@ -1,5 +1,6 @@
 "   \ 'coc-intelephense',
 let g:coc_global_extensions = [
+  \ 'coc-phpls',
   \ 'coc-tsserver',
   \ 'coc-eslint',
   \ 'coc-json',
