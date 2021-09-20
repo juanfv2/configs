@@ -62,12 +62,12 @@ inoremap § <Esc>:m .-2<CR>==gi
 vnoremap ¶ :m '>+1<CR>gv=gv
 vnoremap § :m '<-2<CR>gv=gv
 
-" add semi-colon ton end of line
-inoremap <leader>, <C-O>A; <ESC>
-nnoremap <leader>, $A; <ESC>
+" add semi-colon to end of line
+inoremap ,, <C-O>A; <ESC>
+nnoremap ,, $A; <ESC>
 
 " close all files except own
-nnoremap <silent><nowait> <leader>ll :w! <bar> %bd <bar> e# <bar> bd# <CR>
-" nnoremap  <leader>ll :w! <bar> %bd <bar> e# <bar> bd# <CR>
+nnoremap <silent><nowait> <leader>ll :w! <bar> %bd <bar> e# <bar> bd# <CR> <bar> '"
   
 
+nnoremap <leader>hh :let @+=expand("%") . ':' . line(".")<CR>
