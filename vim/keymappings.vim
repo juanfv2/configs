@@ -5,6 +5,7 @@ nnoremap <silent><nowait> jº :Startify<CR>
 nnoremap <silent><nowait> j1 :call ToggleNetrw()<CR>
 nnoremap <silent><nowait> j2 :Files<CR>
 nnoremap <silent><nowait> j3 :Rg<CR>
+nnoremap <silent><nowait> j4 :GBranches<CR>
 nnoremap <silent><nowait> f0 :set rnu!<CR>
 nnoremap <silent><nowait> ya :%y<CR>
 nnoremap <silent><nowait> da :%d<CR>

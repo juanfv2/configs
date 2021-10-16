@@ -49,6 +49,8 @@ set clipboard=unnamed                   " Copy paste between vim and everything 
 set cmdheight=1                         " More space for displaying messages
 set iskeyword+=-                        " treat dash separated words as a word text object
 set bg=dark
+" set foldmethod=indent
+set foldmethod=syntax
 
 colorscheme gruvbox
 
