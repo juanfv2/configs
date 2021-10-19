@@ -15,6 +15,8 @@ call plug#begin('~/.vim/plugged')
     " Plug 'yaegassy/coc-intelephense'
     Plug 'arnaud-lb/vim-php-namespace'
     Plug 'editorconfig/editorconfig-vim'   
+    Plug 'honza/vim-snippets'
+
     " git:
     Plug 'airblade/vim-gitgutter'
     
