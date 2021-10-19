@@ -64,3 +64,6 @@ endfunction
 " nnoremap <silent><nowait> t0 :terminal vertical resize 25<CR>
 nnoremap <silent><nowait> t1 :call <SID>ToggleTerminal('J', 15)<CR>
 tnoremap <silent><nowait> t2 <C-\><C-n>:bd!<CR>
+tnoremap <silent><nowait> t3 <C-\><C-n><C-w>k<CR>
+nnoremap <silent><nowait> t4 <C-w><c-j>i<CR>
+

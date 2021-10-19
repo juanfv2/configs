@@ -40,6 +40,7 @@ alias waka-m="printf \"[settings]\napi_key = 6b754014-683e-43ad-9d9a-55b780792e6
 alias art="php artisan"
 alias artt="clear && php artisan test --filter"
 alias pf="clear && vendor/bin/phpunit --testdox --filter"
+alias atall="clear && php artisan test"
 
 # ssh
 

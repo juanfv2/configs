@@ -20,7 +20,8 @@ let g:coc_global_extensions = [
   \ 'coc-yank',
   \ 'coc-sql',
   \ 'coc-sqlfluff',
-  \ 'coc-spell-checker'
+  \ 'coc-spell-checker',
+  \ 'coc-solargraph'
   \ ]
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some

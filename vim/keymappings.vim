@@ -7,10 +7,11 @@ nnoremap <silent><nowait> j2 :Files<CR>
 nnoremap <silent><nowait> j3 :Rg<CR>
 nnoremap <silent><nowait> j4 :GBranches<CR>
 nnoremap <silent><nowait> f0 :set rnu!<CR>
+nnoremap <silent><nowait> fa :Fold<CR>
+nnoremap <silent><nowait> fd :Format<CR>
 nnoremap <silent><nowait> ya :%y<CR>
 nnoremap <silent><nowait> da :%d<CR>
 nnoremap <silent><nowait> ra ggVGp<CR>
-nnoremap <silent><nowait> fd :Format<CR>
 nnoremap <leader><leader> :w<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
@@ -21,6 +22,7 @@ nnoremap <leader>f :Files<CR>
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
+nnoremap <c-x> :bp \|bd #<cr>
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
