@@ -27,8 +27,8 @@ set softtabstop=4       " Number of spaces per Tab
 set ruler                               " Show row and column ruler information
 set autowriteall                        " Auto-write all file changes
 
-set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
+set encoding=utf-8                      " The encoding displayed
 set fileencoding=utf-8                  " The encoding written to file
 
 set termguicolors
@@ -41,7 +41,7 @@ set showtabline=2                       " Always show tabs
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
-set timeoutlen=500                      " By default timeoutlen is 1000 ms
+set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set undolevels=1000                     " Number of undo levels
 set backspace=indent,eol,start          " Backspace Behavior
 set mouse=a                             " Enable your mouse
