@@ -11,7 +11,6 @@ return require('packer').startup(function()
     use { "folke/which-key.nvim" }
     use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
 
-
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -21,5 +20,7 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/vim-vsnip'
     use 'onsails/lspkind-nvim'
+    use 'mhinz/vim-startify'
+    use 'phpactor/phpactor'
 
 end)

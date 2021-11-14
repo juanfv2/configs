@@ -10,7 +10,7 @@ options = {
     nowait = true
 }
 
-map('n', 'jº', ':Startify', options)
+map('n', 'jº', ':Startify<cr>', options)
 map('n', 'j1', ':NvimTreeToggle<cr>', options)
 map('n', 'j2', ':Telescope find_files<cr>', options)
 map('n', 'j3', ':Telescope live_grep<cr>', options)
@@ -42,12 +42,12 @@ map('n', '<c-l>', '<c-w>l', options)
 -- <alt>j ¶
 -- <alt>k §
 -- #1: Move text
-map('n', '¶', ':m .+1', options)
-map('n', '§', ':m .-2', options)
-map('i', '¶', '<cr>:m .+1', options)
-map('i', '§', '<cr>:m .-2', options)
-map('v', '¶', ':m \'>+1', options)
-map('v', '§', ':m \'>-2', options)
+map('n', '¶', ':m .+1<cr>==', options)
+map('n', '§', ':m .-2<cr>==', options)
+map('i', '¶', '<cr>:m .+1<cr>==gi', options)
+map('i', '§', '<cr>:m .-2<cr>==gi', options)
+map('v', '¶', ':m \'>+1<cr>gv=gv', options)
+map('v', '§', ':m \'>-2<cr>gv=gv', options)
 
 -- #2: Jump list mutations
 map('n', '<expr> k', '(v:count > 5 ? \"m\'\" . v:count : \"\") . \'k\'', options)
@@ -65,14 +65,14 @@ map('n', 'N', 'Nzzzv', options)
 map('n', 'J', 'mzJ`z', options)
 
 -- #5: set Y to duplicate lines, works in visual mode as well.
-map('n', 'yr', 'yyp', options)
-map('v', 'yr', 'y`>pgv', options)
+map('n', '00', 'yyp', options)
+map('v', '00', 'y`>pgv', options)
 
 -- change behave vim for Y
 map('n', 'Y', 'y$', options)
 -- add semi-colon to end of line
-map('i', 'kk', '<C-O>A; <ESC>', options)
-map('n', 'kk', '$A; <ESC>', options)
+map('i', 'jk', '<C-O>A; <ESC>', options)
+map('n', 'jk', '$A; <ESC>', options)
 
 map('v', '<', '<gv', options)
 map('v', '>', '>gv', options)
