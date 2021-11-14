@@ -21,6 +21,7 @@ return require('packer').startup(function()
     use 'onsails/lspkind-nvim'
     
     use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
+    use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
     use 'folke/which-key.nvim'
     use 'mhinz/vim-startify'
     use 'phpactor/phpactor'

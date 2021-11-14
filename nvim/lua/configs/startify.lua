@@ -7,10 +7,10 @@ vim.g.startify_change_to_vcs_root       = 0
 vim.g.startify_enable_special           = 0
 
 vim.g.startify_lists = {
-    {type = 'sessions', header = {'Sessions'}},
-    {type = 'files', header = {'MRU'}},
+    {type = 'sessions' , header = {'Sessions'}},
+    {type = 'files'    , header = {'MRU'}},
     {type = 'bookmarks', header = {'Bookmarks'}},
-    {type = 'commands', header = {'Commands'}},
+    {type = 'commands' , header = {'Commands'}},
 }
 
 vim.g.startify_bookmarks = {
