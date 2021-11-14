@@ -26,13 +26,15 @@ map('i', 'jj', '<ESC>', options)
 map('n', 'ya', ':%y<cr>', options)
 map('n', 'da', ':%d<cr>', options)
 map('n', 'ra', 'ggVGp', options)
-map('n', 'ñ', ':nohlsearch<cr>', options)
+map('n', 'ñ', ':Startify<cr>', options)
 map('n', 'f', ':nohlsearch<cr>', options)
 
 -- navigations
-map('n', '<TAB>', ':bnext<cr>', options)
+map('n', '<TAB>',   ':bnext<cr>', options)
 map('n', '<S-TAB>', ':bprev<cr>', options)
-map('n', '<c-x>', ':bp \\|bd #<cr>', options)
+map('n', '<c-x>',   ':%bd\\|e#\\|bd#<cr>\\|\'"', options)
+-- map('n', '<c-x>', ':bufdo bd<cr>', options)
+-- map('n', '<c-x>', ':bp \\|bd #<cr>', options)
 
 map('n', '<c-h>', '<c-w>h', options)
 map('n', '<c-j>', '<c-w>j', options)

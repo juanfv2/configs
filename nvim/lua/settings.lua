@@ -69,9 +69,16 @@ vim.wo.wrap         = true
 vim.o.cursorline    = true
 vim.wo.signcolumn   = "yes"
 vim.o.bg            = "dark"
-vim.o.fdm           = "manual"
+vim.o.fdm           = "expr"
+vim.o.foldexpr      = "nvim_treesiter#foldexpr()"
+
+-- set foldmethod=expr
+-- set foldexpr=nvim_treesitter#foldexpr()
+
+
 -- indent
 -- syntax
+
 vim.cmd('colorscheme nord')
 -- vim.cmd[[colorscheme nord]]
 -- Example config in lua
