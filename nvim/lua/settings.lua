@@ -39,7 +39,7 @@ vim.o.fileencoding = 'utf-8'
 
 vim.o.termguicolors = true
 vim.o.swapfile      = false
-vim.o.undodir       = '~/.nvim/undodir'
+vim.o.undodir       = '$HOME/.nvim/undodir'
 vim.o.undofile      = true
 -- set term=xterm-256color
 -- vim.go.term          = 'xterm-256color'

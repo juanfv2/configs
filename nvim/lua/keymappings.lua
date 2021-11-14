@@ -32,7 +32,7 @@ map('n', 'f', ':nohlsearch<cr>', options)
 -- navigations
 map('n', '<TAB>',   ':bnext<cr>', options)
 map('n', '<S-TAB>', ':bprev<cr>', options)
-map('n', '<c-x>',   ':%bd\\|e#\\|bd#<cr>\\|\'"', options)
+map('n', '1<tab>',   ':w! <bar> %bd <bar> e# <bar> bd# <CR> <bar> \'"', options)
 -- map('n', '<c-x>', ':bufdo bd<cr>', options)
 -- map('n', '<c-x>', ':bp \\|bd #<cr>', options)
 
