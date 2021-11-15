@@ -13,6 +13,14 @@ local mappings = {
         R = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', "Remove workspace folder"},
         r = {'<cmd>lua vim.lsp.buf.rename()<CR>', "Rename"}
     },
+    f = {
+        name = "File",
+        w = {':Startify<CR>', "Startify"},
+        a = {'<cmd>lua vim.lsp.buf.add_file_watch()<CR>', "Add file watch"},
+        d = {'<cmd>lua vim.lsp.buf.declaration()<CR>', "Declaration"},
+        e = {'<cmd>lua vim.lsp.buf.execute_command()<CR>', "Execute command"},
+        f = {'<cmd>lua vim.lsp.buf.formatting()<CR>', "Format file"},
+    }
 }
 
 local options = {
