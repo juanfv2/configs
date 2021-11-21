@@ -46,5 +46,6 @@ alias ata="clear && php artisan test"
 
 alias g2m="ssh -t mobilitika1@172.16.20.33 -p 22"
 alias g2ro="ssh -t ransarchivo@162.241.208.127 -p 22"
-alias g2i="ssh -t -i /Users/juan/.ssh/_.z.infrasal.pem bitnami@infrasal.mobilitika.com -p 22"
-alias g2r="ssh -t -i /Users/juan/.ssh/_.z.gema.pem     gmpadm@10.32.16.10 -p 22"
+alias g2i="ssh -t -i /Users/juan/.ssh/_.z.infrasal.pem  bitnami@infrasal.mobilitika.com -p 22"
+alias g2p="ssh -t -i /Users/juan/.ssh/_.z.promerica.pem admin@34.215.202.217            -p 22"
+alias g2r="ssh -t -i /Users/juan/.ssh/_.z.gema.pem      gmpadm@10.32.16.10              -p 22"

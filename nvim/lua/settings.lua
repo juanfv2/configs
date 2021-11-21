@@ -76,17 +76,7 @@ vim.o.foldexpr      = "nvim_treesiter#foldexpr()"
 -- set foldmethod=expr
 -- set foldexpr=nvim_treesitter#foldexpr()
 
-
 -- indent
 -- syntax
 
-vim.cmd('colorscheme nord')
--- vim.cmd[[colorscheme nord]]
--- Example config in lua
--- vim.g.nord_contrast = true
--- vim.g.nord_borders = false
--- vim.g.nord_disable_background = false
--- vim.g.nord_italic = false
-
--- -- Load the colorscheme
--- require('nord').set()
+vim.cmd('colorscheme gruvbox')

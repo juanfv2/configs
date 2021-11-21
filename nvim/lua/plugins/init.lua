@@ -22,13 +22,12 @@ return require('packer').startup(function()
 
     use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
+    use 'lukas-reineke/indent-blankline.nvim'
     use 'folke/which-key.nvim'
     use 'mhinz/vim-startify'
     use 'phpactor/phpactor'
     use 'github/copilot.vim'
 
-
-    use 'tpope/ragtag'
     use 'tpope/vim-repeat'
     use 'tpope/vim-surround'
     use 'tpope/vim-fugitive'

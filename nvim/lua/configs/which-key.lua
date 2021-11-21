@@ -17,7 +17,8 @@ local mappings = {
         name = "File",
         w = {':Startify<CR>', "Startify"},
         a = {'<cmd>lua vim.lsp.buf.add_file_watch()<CR>', "Add file watch"},
-        d = {'<cmd>lua vim.lsp.buf.declaration()<CR>', "Declaration"},
+        d = {'<cmd>lua vim.lsp.buf.definition()<CR>', "Definition"},
+        D = {'<cmd>lua vim.lsp.buf.declaration()<CR>', "Declaration"},
         e = {'<cmd>lua vim.lsp.buf.execute_command()<CR>', "Execute command"},
         f = {'<cmd>lua vim.lsp.buf.formatting()<CR>', "Format file"},
     }

@@ -13,6 +13,11 @@ require'nvim-tree'.setup {
     enable = true,
     auto_open = true,
   },
+  update_focused_file = {
+    enable      = false,
+    update_cwd  = false,
+    ignore_list = {}
+  },
   diagnostics = {
     enable = false,
     icons = {
@@ -21,11 +26,6 @@ require'nvim-tree'.setup {
       warning = "",
       error = "",
     }
-  },
-  update_focused_file = {
-    enable      = false,
-    update_cwd  = false,
-    ignore_list = {}
   },
   system_open = {
     cmd  = nil,
