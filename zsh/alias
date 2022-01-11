@@ -38,6 +38,10 @@ alias waka-m="printf \"[settings]\napi_key = 6b754014-683e-43ad-9d9a-55b780792e6
 # php/laravel
 
 alias art="php artisan"
+alias pide="php artisan ide-helper:generate"
+alias pide-r="php artisan ide-helper:reset"
+alias pide-m="php artisan ide-helper:models --nowrite"
+
 alias artt="clear && php artisan test --filter"
 alias pf="clear && vendor/bin/phpunit --testdox --filter"
 alias ata="clear && php artisan test"
@@ -49,3 +53,5 @@ alias g2ro="ssh -t ransarchivo@162.241.208.127 -p 22"
 alias g2i="ssh -t -i /Users/juan/.ssh/_.z.infrasal.pem  bitnami@infrasal.mobilitika.com -p 22"
 alias g2p="ssh -t -i /Users/juan/.ssh/_.z.promerica.pem admin@34.215.202.217            -p 22"
 alias g2r="ssh -t -i /Users/juan/.ssh/_.z.gema.pem      gmpadm@10.32.16.10              -p 22"
+alias g2sd="ssh -t -i /Users/juan/.ssh/_.z.safe-drive.pem sfdrive@safedrive.com.sv      -p 22"
+

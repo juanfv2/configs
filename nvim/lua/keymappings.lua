@@ -4,7 +4,7 @@ local map = vim.api.nvim_set_keymap
 map('n', '<Space>', '', {})
 vim.g.mapleader = ' ' -- 'vim.g' sets global variables
 
-options = {
+local options = {
     noremap = true,
     silent = true,
     nowait = true
