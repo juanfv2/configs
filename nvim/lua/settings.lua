@@ -72,7 +72,7 @@ vim.o.fdm           = "expr"
 vim.o.foldexpr      = "nvim_treesiter#foldexpr()"
 
 vim.o.termguicolors = false
-vim.cmd('colorscheme onedark')
+vim.cmd('colorscheme gruvbox')
 
 -- indent
 -- syntax

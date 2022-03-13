@@ -2,6 +2,16 @@ require('telescope').setup{
   defaults = {
     -- Default configuration for telescope goes here:
     -- config_key = value,
+    vimgrep_arguments = {
+          'rg',
+          '--color=never',
+          '--no-heading',
+          '--with-filename',
+          '--line-number',
+          '--column',
+          '--smart-case',
+          '-uu' -- **This is the added flag**
+    },
     mappings = {
       i = {
         -- map actions.which_key to <C-h> (default: <C-/>)
@@ -19,6 +29,7 @@ require('telescope').setup{
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
+  find_files = { hidden = false }
   },
   extensions = {
     -- Your extension configuration goes here:
