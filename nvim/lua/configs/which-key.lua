@@ -29,19 +29,30 @@ local mappings = {
         a = {':TestSuite<cr>', "Test suite"},
         l = {':TestLast<cr>', "Test last"},
         g = {':TestVisit<cr>', "Test Visit"},
+    },
+    d = {
+        name = "Debug",
+        b = {':lua require\'dap\'.toggle_breakpoint()<cr>', 'Toggle breakpoint'},
+        n = {':lua require\'dap\'.continue()<cr>', 'Debug continue'},
+        m = {':lua require\'configs.dap-fn\'.stop()<cr>', 'Debug stop'},
+        i = {':lua require\'dap\'.step_into()<cr>', 'Debug step into'},
+        o = {':lua require\'dap\'.step_over()<cr>', 'Debug step over'},
+        u = {':lua require\'dap\'.step_out()<cr>', 'Debug step out'},
+        g = {':lua require\'dap\'.repl.toggle()<cr>', 'Debug REPL toggle'},
+        s = {':lua require\'configs.dap-fn\'.scopes()<cr>', 'Debug Scopes'},
+        a = {':lua require\'configs.dap-fn\'.fullscopes()<cr>', 'Debug Full Scopes'},
+        l = {':lua require\'dap\'.list_breakpoints()<cr>', 'List Breakpoints'},
+        c = {':lua require\'dap\'.clear_breakpoints()<cr>', 'Clear Breakpoints'},
+        r = {':lua require\'dap\'.run_to_cursor()<cr>', 'Run to cursor'},
+        t = {':lua require\'dap-go\'.debug_test()<cr>', 'Debug test'},
     }
+
 }
 
 local options = {
     prefix = "<leader>"
 }
--- /*
--- nmap <silent> <leader>t <CR>
--- nmap <silent> <leader>T :TestFile<CR>
--- nmap <silent> <leader>a :TestSuite<CR>
--- nmap <silent> <leader>l :TestLast<CR>
--- nmap <silent> <leader>g :TestVisit<CR>
--- */
+
 -- As an example, we will the create following mappings:
 --  * <leader>ff find files
 --  * <leader>fr show recent files

@@ -117,4 +117,13 @@ map('n', '<c-t>', ':ToggleTerm<CR>', options)
 map('t', '<leader>.', ':bd!<cr>', options)
 map('t', '<leader><Esc>', '<C-\\><C-n>', options)
 
+-- -------------------------------------------------------------------------- --
+-- git                                                                        --
+-- -------------------------------------------------------------------------- --
+
+map('n', 'ga', ':Git add .', options)
+map('n', 'gp', ':Git push', options)
+map('n', 'gl', ':Git pull', options)
+map('n', 'fea', ':Git fetch --all -p', options)
+
 

@@ -24,14 +24,28 @@ return require('packer').startup(function()
     use 'hrsh7th/vim-vsnip'
     use 'onsails/lspkind-nvim'
 
-    use {"akinsho/toggleterm.nvim"}
     use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
+
+    -- use 'mfussenegger/nvim-dap'
+    -- use 'Pocco81/DAPInstall.nvim'
+    -- use { 'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
+    -- use { 'yriveiro/dap-go.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
+    use { 'leoluz/nvim-dap-go',
+        requires = {
+            'rcarriga/nvim-dap-ui',
+            'mfussenegger/nvim-dap',
+            'Pocco81/DAPInstall.nvim',
+            'leoluz/nvim-dap-go',
+        }
+    }
+
     use 'lukas-reineke/indent-blankline.nvim'
     use 'folke/which-key.nvim'
     use 'mhinz/vim-startify'
     use 'github/copilot.vim'
     use 'vim-test/vim-test'
+    use 'akinsho/toggleterm.nvim'
     
     -- -------------------------------------------------------------------------- --
     -- long live the pope                                                         --
