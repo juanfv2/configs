@@ -34,7 +34,7 @@ map('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', options)
 map('n', '<leader>o', '<cmd>NvimTreeFocus<CR>', options)
 
 -- Telescope
-map('n', '<leader>ff', ':Telescope find_files hidden=false no_ignore=false<CR>', options)
+-- map('n', '<leader>ff', ':Telescope find_files hidden=false no_ignore=false<CR>', options)
 map('n', '<leader>fw', '<cmd>Telescope live_grep<CR>', options)
 map('n', '<leader>fb', '<cmd>Telescope buffers<CR>', options)
 map('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', options)

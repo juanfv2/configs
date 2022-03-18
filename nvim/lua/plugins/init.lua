@@ -27,10 +27,6 @@ return require('packer').startup(function()
     use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
 
-    -- use 'mfussenegger/nvim-dap'
-    -- use 'Pocco81/DAPInstall.nvim'
-    -- use { 'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
-    -- use { 'yriveiro/dap-go.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
     use { 'leoluz/nvim-dap-go',
         requires = {
             'rcarriga/nvim-dap-ui',

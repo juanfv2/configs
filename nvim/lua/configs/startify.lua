@@ -16,5 +16,7 @@ vim.g.startify_lists = {
 vim.g.startify_bookmarks = {
     {z = '~/.zshrc'},
     {v = '~/.config/nvim/'},
+    {h = '/usr/local/etc/httpd/'},
+    {p = '/usr/local/etc/php/'},
 }
 
