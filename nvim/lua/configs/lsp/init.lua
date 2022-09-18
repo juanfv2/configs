@@ -2,14 +2,15 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = {'solargraph', 'tsserver', 'html', 'cssls', -- 'sumneko_lua',
-'vimls', 'jsonls', 'emmet_ls', 'angularls', 'phpactor'}
+local servers = {'solargraph', 'tsserver', 'html', 'cssls', 'vimls', 'jsonls', 'emmet_ls', 'angularls', 'phpactor'} 
+-- 'sumneko_lua',
 for _, lsp in ipairs(servers) do
     require'lspconfig'[lsp].setup {
         capabilities = capabilities
     }
 end
 
+--[[ 
 local system_name
 if vim.fn.has("mac") == 1 then
     system_name = "macOS"
@@ -55,3 +56,4 @@ require'lspconfig'.sumneko_lua.setup {
         }
     }
 }
+]]

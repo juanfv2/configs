@@ -22,7 +22,6 @@ map('n', '<c-m>', '<cmd>resize +2<CR>', options)
 map('n', '<c-N>', '<cmd>vertical resize -2<CR>', options)
 map('n', '<c-M>', '<cmd>vertical resize +2<CR>', options)
 
---
 -- Navigate buffers
 map('n', '<S-l>', '<cmd>bnext<CR>', options)
 map('n', '<S-h>', '<cmd>bprevious<CR>', options)
@@ -61,11 +60,13 @@ map('n', '<leader><esc>', ':nohlsearch<cr>', options)
 map('n', '<leader>w', ':w<cr>', options)
 map('n', '<leader>q', ':q<cr>', options)
 map('n', 'je', ':NvimTreeFindFile<cr>', options)
-map('i', 'jj', '<ESC>', options)
-map('n', 'ya', ':%y<cr>', options)
-map('n', 'da', ':%d<cr>', options)
-map('n', 'ra', 'ggVGp', options)
+map('n', 'hya', ':%y<cr>', options)
+map('n', 'hda', ':%d<cr>', options)
+map('n', 'hra', 'ggVGp', options)
 map('n', 'ñ', ':Startify<cr>', options)
+map('i', 'jj', '<ESC>', options)
+map('i', 'Âµ', 'copilot#Accept("<CR>")', options)
+-- alt-m == Âµ
 
 -- navigations
 
@@ -121,9 +122,9 @@ map('t', '<leader><Esc>', '<C-\\><C-n>', options)
 -- git                                                                        --
 -- -------------------------------------------------------------------------- --
 
-map('n', 'ga', ':Git add .', options)
-map('n', 'gp', ':Git push', options)
-map('n', 'gl', ':Git pull', options)
-map('n', 'fea', ':Git fetch --all -p', options)
+map('n', 'ga', ':Git add .<cr>', options)
+map('n', 'gp', ':Git push<cr>', options)
+map('n', 'gl', ':Git pull<cr>', options)
+map('n', 'fea', ':Git fetch --all -p<cr>', options)
 
 

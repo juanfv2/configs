@@ -13,7 +13,7 @@ vim.o.visualbell = true
 
 vim.o.ignorecase = true
 vim.o.smartcase  = false
-vim.o.incsearch  = false
+vim.o.incsearch  = true
 vim.o.hlsearch   = false
 vim.o.laststatus = 0
 
@@ -32,7 +32,6 @@ vim.bo.tabstop     = 4
 -- Advanced
 -- vim.o.rules = true;
 vim.o.autowriteall = true
-
 vim.o.pumheight    = 10
 vim.o.encoding     = 'utf-8'
 vim.o.fileencoding = 'utf-8'
@@ -49,12 +48,11 @@ vim.o.writebackup   = false
 vim.o.updatetime    = 300
 vim.o.timeoutlen    = 300
 vim.o.undolevels    = 1000
-vim.o.backspace     = "indent,eol,start"
-vim.o.mouse         = "a"
-vim.o.clipboard     = "unnamedplus"
+vim.o.backspace     = 'indent,eol,start'
+vim.o.mouse         = 'a'
+vim.o.clipboard     = 'unnamedplus'
 vim.o.cmdheight     = 1
 -- vim.o.iskeyword     = '-'
-
 vim.o.shortmess     = vim.o.shortmess .. 'c'
 vim.o.hidden        = true
 vim.o.whichwrap     = 'b,s,<,>,[,],h,l'
@@ -66,14 +64,11 @@ vim.o.scrolloff     = 8
 vim.o.sidescrolloff = 5
 vim.wo.wrap         = true
 vim.o.cursorline    = true
-vim.wo.signcolumn   = "yes"
-vim.o.bg            = "dark"
-vim.o.fdm           = "expr"
-vim.o.foldexpr      = "nvim_treesiter#foldexpr()"
-
+vim.wo.signcolumn   = 'yes'
+vim.o.bg            = 'dark'
+vim.o.fdm           = 'expr'
+vim.o.foldexpr      = 'nvim_treesiter#foldexpr()'
 vim.o.termguicolors = false
 vim.cmd('colorscheme gruvbox')
 
--- indent
--- syntax
-
+vim.highlight.on_yank {higroup='IncSearch', timeout=150}

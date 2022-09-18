@@ -1,10 +1,13 @@
-local dap, dapui, dap_install = require("dap"), require("dapui"), require("dap-install")
+local dap = require("dap")
+local  dapui = require("dapui") 
+-- local dap_install = require("dap-buddy")
 local api = vim.api
 
 dapui.setup()
 require('dap-go').setup()
 
-dap_install.config("php", {
+--[[
+ dap_install.config("php", {
     configurations = {
     {
             type = 'php',
@@ -19,7 +22,8 @@ dap_install.config("php", {
             -- end
         }
     }
-})
+}) 
+]]
 
 -- Events Listeners
 dap.listeners.after.event_initialized["dapui_config"] = function()

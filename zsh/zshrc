@@ -1,10 +1,19 @@
 #!/bin/zsh
 
+## Env variables
+export E=/Volumes/jfv2
+export EHOME=$E$HOME
+
+## Symbolic links
+
+# Create a symlink to External Drive to preserve internal drive.
+# ln -s $EHOME/Library/Containers/com.docker.docker /Users/juan/Library/Containers
+
 # Useful Functions
 source "$ZSHDIR/functions"
 
 zsh_add_file "alias"
-zsh_add_file "prompt"
+# zsh_add_file "prompt"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
@@ -32,3 +41,8 @@ export PATH="$HOME/flutter/bin:$PATH"
 
 # The original version is saved in .bash_profile.pysave
 export PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH"
+export PATH="/Users/juan/Documents/sonar-scanner-4.7.0.2747-macosx/bin:$PATH"
+export PATH="$HOME/.pub-cache/bin:$PATH"
+
+
+

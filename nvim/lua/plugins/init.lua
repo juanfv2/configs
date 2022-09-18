@@ -7,10 +7,12 @@ return require('packer').startup(function()
     use 'morhetz/gruvbox'
     use 'joshdick/onedark.vim'
 
+    use 'machakann/vim-highlightedyank'
+    use 'kyazdani42/nvim-web-devicons'
     use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
-    use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-    use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
-    use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
+    use 'nvim-lualine/lualine.nvim'
+    use 'akinsho/bufferline.nvim'
+    use 'kyazdani42/nvim-tree.lua'
     use 'p00f/nvim-ts-rainbow'
     use 'windwp/nvim-ts-autotag'
     use 'windwp/nvim-autopairs'
@@ -23,16 +25,15 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/vim-vsnip'
     use 'onsails/lspkind-nvim'
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-telescope/telescope.nvim'
+    use 'lewis6991/gitsigns.nvim'
 
-    use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
-    use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, }
-
+    use 'Pocco81/dap-buddy.nvim'
     use { 'leoluz/nvim-dap-go',
         requires = {
-            'rcarriga/nvim-dap-ui',
             'mfussenegger/nvim-dap',
-            'Pocco81/DAPInstall.nvim',
-            'leoluz/nvim-dap-go',
+            'rcarriga/nvim-dap-ui',
         }
     }
 
@@ -42,6 +43,7 @@ return require('packer').startup(function()
     use 'github/copilot.vim'
     use 'vim-test/vim-test'
     use 'akinsho/toggleterm.nvim'
+    use 'christoomey/vim-tmux-navigator'
     
     -- -------------------------------------------------------------------------- --
     -- long live the pope                                                         --
@@ -63,7 +65,7 @@ return require('packer').startup(function()
     -- -------------------------------------------------------------------------- --
     -- php                                                                        --
     -- -------------------------------------------------------------------------- --
-    use 'phpactor/phpactor'
+    -- use 'phpactor/phpactor'
     use 'noahfrederick/vim-composer'
     use 'noahfrederick/vim-laravel'
 

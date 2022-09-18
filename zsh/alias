@@ -18,6 +18,9 @@ alias cleanxcode='rm -frdv ~/Library/Developer/Xcode/DerivedData && sudo rm -frd
 alias cleancode='rm -frdv ~/Library/Application\ Support/Code/User/workspaceStorage'
 alias cleanmac='sudo rm -rfv ~/Library/Caches/ && sudo rm -rfv /Library/Caches/ && sudo rm -frdv /.Spotlight-V100'
 
+alias move-all='mv /Users/juan/Desktop/* /Volumes/jfv1/Desktop/ && mv /Users/juan/Documents/* /Volumes/jfv1/Documents/ && mv /Users/juan/Downloads/* /Volumes/jfv1/Downloads/'
+alias move-wsp='mv /Users/juan/workspace/* /Volumes/jfv1/workspace'
+
 # mysql command
 
 alias mys='sudo mysql.server start'
@@ -46,6 +49,7 @@ alias artt="clear && php artisan test --filter"
 alias pf="clear && vendor/bin/phpunit --testdox --filter"
 alias ata="clear && php artisan test"
 
+alias luamake=/Users/juan/.config/lang-servers/lua-language-server/3rd/luamake/luamake
 # ssh
 
 # alias g2m="ssh -t mobilitika1@172.16.20.33 -p 22"
