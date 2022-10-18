@@ -45,8 +45,8 @@ alias pide="php artisan ide-helper:generate"
 alias pide-r="php artisan ide-helper:reset"
 alias pide-m="php artisan ide-helper:models --nowrite"
 
-alias pai="clear && php artisan test --filter"
-alias pap="clear && php artisan test --parallel"
+alias ptf="clear && php artisan test --filter"
+alias ptp="clear && php artisan test --parallel"
 alias pat="clear && php artisan test"
 alias pf="clear && vendor/bin/phpunit --testdox --filter"
 
