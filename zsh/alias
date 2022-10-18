@@ -40,14 +40,15 @@ alias waka-m="printf \"[settings]\napi_key = 6b754014-683e-43ad-9d9a-55b780792e6
 # php/laravel
 
 alias phpi="pecl uninstall -r xdebug && pecl install xdebug && pecl uninstall -r imagick && pecl install imagick"
-alias art="php artisan"
+alias part="php artisan"
 alias pide="php artisan ide-helper:generate"
 alias pide-r="php artisan ide-helper:reset"
 alias pide-m="php artisan ide-helper:models --nowrite"
 
-alias artt="clear && php artisan test --filter"
+alias pai="clear && php artisan test --filter"
+alias pap="clear && php artisan test --parallel"
+alias pat="clear && php artisan test"
 alias pf="clear && vendor/bin/phpunit --testdox --filter"
-alias ata="clear && php artisan test"
 
 alias luamake=/Users/juan/.config/lang-servers/lua-language-server/3rd/luamake/luamake
 # ssh
