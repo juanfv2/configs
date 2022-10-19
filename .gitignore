@@ -9,3 +9,5 @@ nvim/plugin
 iterm2
 nvim/~
 lang-servers
+yarn
+*.log

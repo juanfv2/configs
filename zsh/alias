@@ -18,7 +18,7 @@ alias cleanxcode='rm -frdv ~/Library/Developer/Xcode/DerivedData && sudo rm -frd
 alias cleancode='rm -frdv ~/Library/Application\ Support/Code/User/workspaceStorage'
 alias cleanmac='sudo rm -rfv ~/Library/Caches/ && sudo rm -rfv /Library/Caches/ && sudo rm -frdv /.Spotlight-V100'
 
-alias move-all='mv /Users/juan/Desktop/* /Volumes/jfv1/Desktop/ && mv /Users/juan/Documents/* /Volumes/jfv1/Documents/ && mv /Users/juan/Downloads/* /Volumes/jfv1/Downloads/'
+alias move-all='mv /Users/juan/Desktop/* /Volumes/jfv1/Desktop && mv /Users/juan/Documents/* /Volumes/jfv1/Documents && mv /Users/juan/Downloads/* /Volumes/jfv1/Downloads'
 alias move-wsp='mv /Users/juan/workspace/* /Volumes/jfv1/workspace'
 
 # mysql command

@@ -6,6 +6,8 @@ return require('packer').startup(function()
     use 'shaunsingh/nord.nvim'
     use 'morhetz/gruvbox'
     use 'joshdick/onedark.vim'
+    use 'tjdevries/colorbuddy.nvim'
+    use 'bkegley/gloombuddy'
 
     use 'machakann/vim-highlightedyank'
     use 'kyazdani42/nvim-web-devicons'
@@ -30,12 +32,7 @@ return require('packer').startup(function()
     use 'lewis6991/gitsigns.nvim'
 
     use 'Pocco81/dap-buddy.nvim'
-    use { 'leoluz/nvim-dap-go',
-        requires = {
-            'mfussenegger/nvim-dap',
-            'rcarriga/nvim-dap-ui',
-        }
-    }
+    use { 'leoluz/nvim-dap-go', requires = { 'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui', } }
 
     use 'lukas-reineke/indent-blankline.nvim'
     use 'folke/which-key.nvim'
