@@ -3,6 +3,7 @@
 ## Env variables
 export E=/Volumes/jfv2
 export EHOME=$E$HOME
+export DC=/Volumes/jfv3_c/
 
 ## Symbolic links
 
@@ -30,14 +31,14 @@ export PATH="/usr/local/sbin:$PATH"
 # mysql
 export PATH="/usr/local/mysql/bin:$PATH"
 # android
-export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_HOME="$DC/Library/Android/sdk"
 export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+# flutter
+export PATH="$DC/Library/flutter/bin:$PATH"
 # Laravel
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 # maven
 export PATH="$HOME/workspace/_.libs/apache-maven-3.5.0/bin:$PATH"
-# flutter
-export PATH="$HOME/flutter/bin:$PATH"
 
 # The original version is saved in .bash_profile.pysave
 export PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH"

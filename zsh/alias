@@ -47,10 +47,10 @@ alias pide-m="php artisan ide-helper:models --nowrite"
 
 alias ptf="clear && php artisan test --filter"
 alias ptp="clear && php artisan test --parallel"
-alias pat="clear && php artisan test"
-alias pf="clear && vendor/bin/phpunit --testdox --filter"
+alias pta="clear && php artisan test"
 
 alias luamake=/Users/juan/.config/lang-servers/lua-language-server/3rd/luamake/luamake
+
 # ssh
 
 # alias g2m="ssh -t mobilitika1@172.16.20.33 -p 22"
