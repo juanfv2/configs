@@ -1,18 +1,25 @@
-require('nvim-autopairs').setup({
+-- import nvim-autopairs safely
+local status, autopairs = pcall(require, "nvim-autopairs")
+if not status then
+    return
+end
+
+autopairs.setup({
     check_ts = true,
-    map_cr = true,
+    map_cr = true
 })
--- If you want insert `(` after select function or method item
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local cmp = require('cmp')
-cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done())
 
--- -- If you want insert `(` after select function or method item
--- local cmp_autopairs = require('nvim-autopairs.completion.cmp')
--- local cmp = require('cmp')
--- cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
+-- import nvim-autopairs completion functionality safely
+local cmp_autopairs_setup, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
+if not cmp_autopairs_setup then
+    return
+end
 
+-- import nvim-cmp plugin safely (completions plugin)
+local cmp_setup, cmp = pcall(require, "cmp")
+if not cmp_setup then
+    return
+end
 
--- -- add a lisp filetype (wrap my-function), FYI: Hardcoded = { "clojure", "clojurescript", "fennel", "janet" }
--- cmp_autopairs.lisp[#cmp_autopairs.lisp+1] = "racket"
-
+-- make autopairs and completion work together
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
