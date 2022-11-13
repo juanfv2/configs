@@ -5,10 +5,6 @@ vim.cmd("syntax on")
 
 vim.wo.number = true
 opt.rnu = true
-opt.linebreak = true
-opt.showbreak = "+++"
-opt.textwidth = 100
-opt.showmatch = true
 opt.spell = true
 opt.spelllang = "en,es"
 opt.visualbell = true
@@ -40,7 +36,7 @@ opt.swapfile = false
 
 -- backup settings
 
-pot.backupdir = "/tmp"
+opt.backupdir = "/tmp"
 opt.directory = "~/.nvim/tmp,."
 opt.backup = true
 opt.writebackup = true
@@ -55,7 +51,7 @@ opt.updatetime = 300
 opt.timeoutlen = 500
 opt.undolevels = 1000
 opt.backspace = "indent,eol,start"
-opt.mouse = "a"
+opt.mouse = ""
 opt.clipboard = "unnamedplus"
 opt.cmdheight = 1
 -- opt.iskeyword     = '-'
@@ -68,12 +64,18 @@ opt.conceallevel = 0
 opt.showmode = true
 opt.scrolloff = 8
 opt.sidescrolloff = 5
-opt.wrap = false
-opt.cursorline = true
 opt.signcolumn = "yes"
-opt.bg = "dark"
 opt.fdm = "expr"
 opt.foldexpr = "nvim_treesiter#foldexpr()"
+
+-- appearance
+opt.linebreak = true
+opt.showbreak = "+++"
+opt.textwidth = 100
+opt.showmatch = true
+opt.wrap = false
+opt.cursorline = true
+opt.bg = "dark"
 opt.termguicolors = false
 
 vim.highlight.on_yank({
