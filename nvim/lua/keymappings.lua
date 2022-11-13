@@ -63,8 +63,8 @@ map("v", "00", "y`>pgv", options)
 -- change behave vim for Y
 map("n", "Y", "y$", options)
 -- add semi-colon to end of line
-map("i", "jk", "<C-O>A; <ESC>", options)
-map("n", "jk", "$A; <ESC>", options)
+map("i", "jk", "<c-o>A;<esc>", options)
+map("n", "jk", "A;<esc>", options)
 
 map("v", "<", "<gv", options)
 map("v", ">", ">gv", options)
@@ -164,12 +164,16 @@ map("t", "<leader>.", ":bd!<cr>", options)
 -- -------------------------------------------------------------------------- --
 -- git                                                                        --
 -- -------------------------------------------------------------------------- --
-map("n", "gg", ":Git<cr>", options)
-map("n", "gs", ":Git status<cr>", options)
-map("n", "ga", ":Git add .<cr>", options)
-map("n", "gp", ":Git push<cr>", options)
-map("n", "gl", ":Git pull<cr>", options)
-map("n", "fea", ":Git fetch --all -p<cr>", options)
+map("n", "<leader>gh", ":Git<cr>", options)
+map("n", "<leader>gaa", ":Git add .<cr>", options)
+map("n", "<leader>gp", ":Git push<cr>", options)
+map("n", "<leader>gl", ":Git pull<cr>", options)
+map("n", "<leader>fe", ":Git fetch --all -p<cr>", options)
+map("n", "<leader>ggl", ":diffget //3", options)
+map("n", "<leader>ggr", ":diffget //2", options)
+
+
+-- https://gist.github.com/mikaelz/38600d22b716b39b031165cd6d201a67
 
 -- -------------------------------------------------------------------------- --
 -- DAP (Debug Adapter Protocol)                                               --
