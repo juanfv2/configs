@@ -14,11 +14,14 @@ local options = {
 -- normal                                                                     --
 -- -------------------------------------------------------------------------- --
 
-map("n", "fd", ":lua vim.lsp.buf.format { async = true }<CR>", options)
-map("n", "f0", ":set rnu!<cr>", options)
-map("n", "f9", ":nohlsearch<cr>", options)
+map("n", "-1", ":nohlsearch<cr>", options)
+map("n", "-2", ":set rnu!<cr>", options)
+
+map("n", "<leader>fd", ":lua vim.lsp.buf.format { async = true }<CR>", options)
 
 map("n", "<leader><esc>", ":nohlsearch<cr>", options)
+map("n", "<leader>y", '"*y', options)
+map("n", "<leader>p", '"*p', options)
 map("n", "<leader>w", ":w<cr>", options)
 map("n", "<leader>q", ":q<cr>", options)
 map("n", "ww¡", ":%y<cr>", options)
@@ -66,6 +69,10 @@ map("n", "jk", "$A; <ESC>", options)
 map("v", "<", "<gv", options)
 map("v", ">", ">gv", options)
 
+-- hard mode
+map("n", "mh", ":call HardMode()<cr>", options)
+map("n", "me", ":call EasyMode()<cr>", options)
+
 -- -------------------------------------------------------------------------- --
 -- php                                                                        --
 -- -------------------------------------------------------------------------- --
@@ -110,8 +117,8 @@ map("n", "ñ", ":Startify<cr>", options)
 -- NvimTree                                                                   --
 -- -------------------------------------------------------------------------- --
 
-map("n", "<leader>e", ":NvimTreeToggle<CR>", options)
-map("n", "<leader>o", ":NvimTreeFocus<CR>", options)
+map("n", "<leader>ee", ":NvimTreeToggle<CR>", options)
+map("n", "<leader>oo", ":NvimTreeFocus<CR>", options)
 map("n", "je", ":NvimTreeFindFile<cr>", options)
 map("n", "j1", ":NvimTreeToggle<cr>", options)
 
@@ -126,6 +133,8 @@ map("n", "j4", ":Telescope buffers<cr>", options)
 map("n", "j5", ":Telescope help_tags<cr>", options)
 map("n", "j6", ":Telescope git_status<cr>", options)
 map("n", "j7", ":Telescope git_commits<cr>", options)
+map("n", "j8", ":Telescope flutter commands<cr>", options)
+map("n", "j9", ":Telescope laravel<cr>", options)
 -- map('n', 'j4', ':GBranches', options)
 
 map("n", "<leader>fw", ":Telescope live_grep<CR>", options)
@@ -155,6 +164,8 @@ map("t", "<leader>.", ":bd!<cr>", options)
 -- -------------------------------------------------------------------------- --
 -- git                                                                        --
 -- -------------------------------------------------------------------------- --
+map("n", "gg", ":Git<cr>", options)
+map("n", "gs", ":Git status<cr>", options)
 map("n", "ga", ":Git add .<cr>", options)
 map("n", "gp", ":Git push<cr>", options)
 map("n", "gl", ":Git pull<cr>", options)
@@ -180,3 +191,8 @@ map(
 )
 -- mostrar u ocultar la interfaz de depuración
 map("n", "<leader>du", ":lua require'dapui'.toggle()<CR>", options)
+
+-- :LspStop and :LspRestart only affect servers managed by nvim-lspconfig, so they won't do anything to null-ls.
+-- Assuming you've set up formatting on save via an autocommand,
+-- you can skip formatting on a single write by using :noautocmd w
+-- (short form :noa w).

@@ -13,7 +13,7 @@ return require("packer").startup(function()
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("machakann/vim-highlightedyank")
-	use("numToStr/Comment.nvim")
+	use("cometsong/CommentFrame.vim")
 
 	-- status-line
 	use("nvim-lualine/lualine.nvim")
@@ -87,7 +87,7 @@ return require("packer").startup(function()
 	use("tpope/vim-repeat")
 	use("tpope/vim-surround")
 	use("tpope/vim-fugitive")
-	-- use("tpope/vim-commentary")
+	use("tpope/vim-commentary")
 	use("tpope/vim-dadbod")
 
 	-- -------------------------------------------------------------------------- --
@@ -102,7 +102,14 @@ return require("packer").startup(function()
 	-- php                                                                        --
 	-- -------------------------------------------------------------------------- --
 	-- use 'phpactor/phpactor'
-	use("noahfrederick/vim-composer")
-	use("noahfrederick/vim-laravel")
+	-- use("noahfrederick/vim-composer")
+	-- use("noahfrederick/vim-laravel")
+	use("adalessa/laravel.nvim")
 	use("rayburgemeestre/phpfolding.vim")
+
+	use("akinsho/flutter-tools.nvim")
+
+	-- learn nvim
+	use("wikitopian/hardmode")
+	use("ThePrimeagen/vim-be-good")
 end)
