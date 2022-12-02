@@ -65,7 +65,7 @@ opt.showmode = true
 opt.scrolloff = 8
 opt.sidescrolloff = 5
 opt.signcolumn = "yes"
-opt.fdm = "expr"
+opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesiter#foldexpr()"
 
 -- appearance

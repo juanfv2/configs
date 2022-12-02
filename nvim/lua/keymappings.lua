@@ -172,7 +172,6 @@ map("n", "<leader>fe", ":Git fetch --all -p<cr>", options)
 map("n", "<leader>ggl", ":diffget //3", options)
 map("n", "<leader>ggr", ":diffget //2", options)
 
-
 -- https://gist.github.com/mikaelz/38600d22b716b39b031165cd6d201a67
 
 -- -------------------------------------------------------------------------- --

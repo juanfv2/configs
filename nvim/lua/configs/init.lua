@@ -11,6 +11,8 @@ require("configs.toggleterm")
 require("configs.commentary")
 require("configs.hardmode")
 require("configs.laravel")
+require("configs.fold")
+require("configs.snippets")
 
 require("configs.flutter-tools")
 require("configs.lsp.cmp")

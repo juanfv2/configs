@@ -10,6 +10,7 @@ return require("packer").startup(function()
 	use("bkegley/gloombuddy")
 
 	-- generics
+	use("vim-scripts/LargeFile")
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("machakann/vim-highlightedyank")

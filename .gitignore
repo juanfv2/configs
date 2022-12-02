@@ -2,7 +2,6 @@ zsh/plugins
 zsh/.zsh_history
 coc
 zsh/.zsh_sessions
-*.swp
 configstore
 psysh
 nvim/plugin
@@ -10,4 +9,7 @@ iterm2
 nvim/~
 lang-servers
 yarn
+valet/Certificates
+valet/CA
+*.swp
 *.log
