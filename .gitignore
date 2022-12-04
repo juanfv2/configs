@@ -13,3 +13,4 @@ valet/Certificates
 valet/CA
 *.swp
 *.log
+_.info

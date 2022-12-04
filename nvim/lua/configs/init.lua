@@ -13,6 +13,7 @@ require("configs.hardmode")
 require("configs.laravel")
 require("configs.fold")
 require("configs.snippets")
+require("configs.projectionist")
 
 require("configs.flutter-tools")
 require("configs.lsp.cmp")

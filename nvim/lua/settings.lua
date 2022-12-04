@@ -5,9 +5,9 @@ vim.cmd("syntax on")
 
 vim.wo.number = true
 opt.rnu = true
-opt.spell = true
-opt.spelllang = "en,es"
-opt.visualbell = true
+-- opt.spell = true
+-- opt.spelllang = "es"
+-- opt.visualbell = true
 
 -- smart search
 opt.ignorecase = true
@@ -79,6 +79,6 @@ opt.bg = "dark"
 opt.termguicolors = false
 
 vim.highlight.on_yank({
-	higroup = "IncSearch",
-	timeout = 150,
+    higroup = "IncSearch",
+    timeout = 150
 })
