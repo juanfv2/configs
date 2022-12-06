@@ -103,7 +103,7 @@ map("n", "<c-l>", "<c-w>l", options)
 -- Navigate buffers
 map("n", "<S-l>", ":bnext<CR>", options)
 map("n", "<S-h>", ":bprevious<CR>", options)
-map("n", "<c-a>", ":w! <bar> %bd <bar> e# <bar> bd# <CR> <bar> ''", options)
+map("n", "<c-x><c-x>", ":w! <bar> %bd <bar> e# <bar> bd# <CR> <bar> ''", options)
 map("n", "<c-x>", ":bd!<cr>", options)
 
 -- -------------------------------------------------------------------------- --
