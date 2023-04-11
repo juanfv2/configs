@@ -58,5 +58,5 @@ telescope.setup({
 	},
 })
 
-require("telescope").load_extension("flutter")
-require("telescope").load_extension("laravel")
+-- require("telescope").load_extension("flutter")
+-- require("telescope").load_extension("laravel")

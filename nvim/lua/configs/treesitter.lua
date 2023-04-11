@@ -5,7 +5,21 @@ if not _status then
 end
 
 treesitter.setup({
-	ensure_installed = { "c", "lua", "rust", "php", "javascript", "dart", "ruby", "c_sharp", "css", "html", "json" },
+	ensure_installed = {
+		"sumneko_lua",
+		"solargraph",
+		"csharp_ls",
+		"intelephense",
+		"tsserver",
+		"html",
+		"cssls",
+		"tailwindcss",
+		"vimls",
+		"jsonls",
+		"emmet_ls",
+		"angularls",
+		"phpactor",
+	},
 	highlight = {
 		enable = true,
 		disable = function(lang, buf)

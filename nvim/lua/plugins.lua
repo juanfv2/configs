@@ -1,122 +1,86 @@
-return require("packer").startup(function()
-    use("wbthomason/packer.nvim")
-    -- -------------------------------------------------------------------------- --
-    -- themes                                                                     --
-    -- -------------------------------------------------------------------------- --
-    use("shaunsingh/nord.nvim")
-    use("morhetz/gruvbox")
-    use("joshdick/onedark.vim")
-    use("tjdevries/colorbuddy.nvim")
-    use("bkegley/gloombuddy")
+local ensure_packer = function()
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
+end
 
-    -- generics
-    use("vim-scripts/LargeFile")
-    use("nvim-lua/plenary.nvim")
-    use("kyazdani42/nvim-web-devicons")
-    use("machakann/vim-highlightedyank")
-    use("cometsong/CommentFrame.vim")
+local packer_bootstrap = ensure_packer()
 
-    -- status-line
-    use("nvim-lualine/lualine.nvim")
+return require("packer").startup(function(use)
+	use("wbthomason/packer.nvim")
 
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate"
-    })
+	use("morhetz/gruvbox")
+	use("lukas-reineke/indent-blankline.nvim")
+	use("akinsho/bufferline.nvim")
+	use("nvim-lualine/lualine.nvim")
+	use("machakann/vim-highlightedyank")
+	use("bluz71/vim-nightfly-colors")
 
-    use("akinsho/bufferline.nvim")
-    use("p00f/nvim-ts-rainbow")
-    use("windwp/nvim-ts-autotag")
-    use("windwp/nvim-autopairs")
+	-- generics
+	use("vim-scripts/LargeFile")
+	use("nvim-lua/plenary.nvim")
+	use("nvim-treesitter/nvim-treesitter")
+	use("vim-test/vim-test")
+	use("lewis6991/gitsigns.nvim")
 
-    -- snippets
-    use("L3MON4D3/LuaSnip") -- snippet engine
-    use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-    use("rafamadriz/friendly-snippets") -- useful snippets
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+	use("neovim/nvim-lspconfig")
+	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
-    -- managing & installing lsp servers, linters & formatters
-    use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
-    use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+	-- formatting & linting
+	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	use("gpanders/editorconfig.nvim")
 
-    -- configuring lsp servers
-    use("neovim/nvim-lspconfig") -- easily configure language servers
-    use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-    use({
-        "glepnir/lspsaga.nvim",
-        branch = "main"
-    }) -- enhanced lsp uis
-    use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
-    use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	-- autocompletion
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
 
-    -- formatting & linting
-    use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-    use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
-    use("gpanders/editorconfig.nvim")
+	-- navigation
+	use("preservim/vimux")
+	use("christoomey/vim-tmux-navigator")
+	use("mhinz/vim-startify")
+	use("nvim-telescope/telescope.nvim")
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
+	use({ "akinsho/toggleterm.nvim", tag = "*" })
 
-    -- autocompletion
-    use("hrsh7th/nvim-cmp")
-    use("hrsh7th/cmp-buffer")
-    use("hrsh7th/cmp-path")
+	use("mfussenegger/nvim-dap")
+	use("rcarriga/nvim-dap-ui")
+	use("Pocco81/dap-buddy.nvim")
+	use("leoluz/nvim-dap-go")
+	use("theHamsta/nvim-dap-virtual-text")
+	-- -------------------------------------------------------------------------- --
+	-- long live the pope                                                         --
+	-- -------------------------------------------------------------------------- --
+	use("tpope/vim-repeat")
+	use("tpope/vim-surround")
+	use("tpope/vim-fugitive")
+	use("tpope/vim-commentary")
+	use("tpope/vim-dadbod")
 
-    -- use 'hrsh7th/cmp-cmdline'
-    -- use 'hrsh7th/cmp-vsnip'
-    -- use 'hrsh7th/vim-vsnip'
-    -- use 'folke/which-key.nvim'
+	-- -------------------------------------------------------------------------- --
+	-- php                                                                        -
+	-- -------------------------------------------------------------------------- --
+	-- use 'phpactor/phpactor'
+	-- use("noahfrederick/vim-composer")
+	-- use("noahfrederick/vim-laravel")
+	use("adalessa/laravel.nvim")
+	use("rayburgemeestre/phpfolding.vim")
 
-    use("lewis6991/gitsigns.nvim")
-
-    use("mfussenegger/nvim-dap")
-    use("rcarriga/nvim-dap-ui")
-    use("Pocco81/dap-buddy.nvim")
-    use("leoluz/nvim-dap-go")
-    use("theHamsta/nvim-dap-virtual-text")
-
-    use("lukas-reineke/indent-blankline.nvim")
-    use("vim-test/vim-test")
-    use({
-        "akinsho/toggleterm.nvim",
-        tag = "*"
-    })
-
-    -- navigation
-    use("christoomey/vim-tmux-navigator")
-    use("mhinz/vim-startify")
-    use({
-        "nvim-telescope/telescope-fzf-native.nvim",
-        run = "make"
-    }) -- dependency for better sorting performance
-    use("nvim-telescope/telescope.nvim")
-    use("kyazdani42/nvim-tree.lua")
-
-    -- -------------------------------------------------------------------------- --
-    -- long live the pope                                                         --
-    -- -------------------------------------------------------------------------- --
-    use("tpope/vim-repeat")
-    use("tpope/vim-surround")
-    use("tpope/vim-fugitive")
-    use("tpope/vim-commentary")
-    use("tpope/vim-dadbod")
-
-    -- -------------------------------------------------------------------------- --
-    -- db                                                                         --
-    -- -------------------------------------------------------------------------- --
-    use("kristijanhusak/vim-dadbod-ui")
-
-    use("tpope/vim-dispatch")
-    use("tpope/vim-projectionist")
-
-    -- -------------------------------------------------------------------------- --
-    -- php                                                                        -
-    -- -------------------------------------------------------------------------- --
-    -- use 'phpactor/phpactor'
-    -- use("noahfrederick/vim-composer")
-    -- use("noahfrederick/vim-laravel")
-    use("adalessa/laravel.nvim")
-    use("rayburgemeestre/phpfolding.vim")
-
-    use("akinsho/flutter-tools.nvim")
-
-    -- learn nvim
-    use("wikitopian/hardmode")
-    use("ThePrimeagen/vim-be-good")
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)

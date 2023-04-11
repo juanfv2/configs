@@ -18,8 +18,8 @@ alias cleanxcode='rm -frdv ~/Library/Developer/Xcode/DerivedData && sudo rm -frd
 alias cleancode='rm -frdv ~/Library/Application\ Support/Code/User/workspaceStorage'
 alias cleanmac='sudo rm -rfv ~/Library/Caches/ && sudo rm -rfv /Library/Caches/ && sudo rm -frdv /.Spotlight-V100'
 
-alias move-all='mv /Users/juan/Desktop/* /Volumes/jfv1/Desktop && mv /Users/juan/Documents/* /Volumes/jfv1/Documents && mv /Users/juan/Downloads/* /Volumes/jfv1/Downloads'
-alias move-wsp='mv /Users/juan/workspace/* /Volumes/jfv1/workspace'
+alias move-all='rsync -rv --remove-source-files /Users/juan/Desktop/* /Volumes/jfv1/Desktop && rsync -rv --remove-source-files /Users/juan/Documents/* /Volumes/jfv1/Documents && rsync -rv --remove-source-files /Users/juan/Downloads/* /Volumes/jfv1/Downloads'
+alias move-wsp='rsync -rv --remove-source-files /Users/juan/workspace/* /Volumes/jfv1/workspace'
 
 # mysql command
 
@@ -41,6 +41,8 @@ alias waka-m="printf \"[settings]\napi_key = 6b754014-683e-43ad-9d9a-55b780792e6
 
 alias phpi="pecl uninstall -r xdebug && pecl install xdebug && pecl uninstall -r imagick && pecl install imagick"
 alias part="php artisan"
+alias pasr="php artisan schedule:run"
+alias pasl="php artisan schedule:list"
 alias pide="php artisan ide-helper:generate"
 alias pide-r="php artisan ide-helper:reset"
 alias pide-m="php artisan ide-helper:models --nowrite"
@@ -60,3 +62,18 @@ alias luamake=/Users/juan/.config/lang-servers/lua-language-server/3rd/luamake/l
 # alias g2r="ssh -t -i /Users/juan/.ssh/_.z.gema.pem      gmpadm@10.32.16.10              -p 22"
 # alias g2sd="ssh -t -i /Users/juan/.ssh/_.z.safe-drive.pem sfdrive@safedrive.com.sv      -p 22"
 
+# I'll be doing another one for Linux, but this one will give you 
+# a pop up notification and sound alert (using the built-in sounds for macOS)
+
+# Requires https://github.com/caarlos0/timer to be installed
+
+# Mac setup for pomo
+alias work="timer 60m && terminal-notifier -message 'Pomodoro'\
+        -title 'Work Timer is up! Take a Break 😊'\
+        -appIcon '~/Pictures/pumpkin.png'\
+        -sound Crystal"
+        
+alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
+        -title 'Break is over! Get back to work 😬'\
+        -appIcon '~/Pictures/pumpkin.png'\
+        -sound Crystal"

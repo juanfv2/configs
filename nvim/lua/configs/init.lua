@@ -1,4 +1,4 @@
-require("configs.treesitter")
+-- require("configs.treesitter")
 require("configs.lualine")
 require("configs.bufferline")
 require("configs.nvim-tree")
@@ -17,9 +17,10 @@ require("configs.projectionist")
 
 require("configs.flutter-tools")
 require("configs.lsp.cmp")
-require("configs.lsp.mason")
+require("configs.lsp_config")
+-- require("configs.lsp.mason")
 require("configs.lsp.lspsaga")
-require("configs.lsp.lspconfig")
+-- require("configs.lsp.lspconfig")
 require("configs.lsp.null-ls")
 
 require("configs.dap")
