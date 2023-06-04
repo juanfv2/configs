@@ -17,3 +17,8 @@ vim.keymap.set("i", "jj", "<ESC>", options)
 -- add semi-colon to end of line
 vim.keymap.set("i", "jk", "<c-o>A;<esc>", options)
 vim.keymap.set("n", "jk", "A;<esc>", options)
+
+
+-- duplicate lines, works in visual mode as well.
+vim.keymap.set("n", "00", "yyp", options)
+vim.keymap.set("v", "00", "y`>pgv", options)
