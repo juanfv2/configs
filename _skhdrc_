@@ -1,0 +1,75 @@
+# https://digitalblake.com/2021/08/27/yabai-and-skhd-configs/
+# https://github.com/koekeishiya/yabai/wiki/Commands 7771
+
+ctrl + cmd - l : osascript -e 'tell application "iTerm to create window with default profile command ""' || open -a "iTerm"
+ctrl + cmd - o : osascript -e 'tell application "VSCode   to create window with default profile command ""' || open -a "Visual Studio Code"
+ctrl + cmd - m : osascript -e 'tell application "Teams    to create window with default profile command ""' || open -a "Microsoft Teams"
+ctrl + cmd - i : osascript -e 'tell application "Brave    to create window with default profile command ""' || open -a "Brave Browser"
+
+ctrl + alt - y : brew services restart yabai
+
+# ================================ Window settings ================================
+# focus window : Activate the window shortcut h: Left j: Next k: Right l: On
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+# Swap window position
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+# Move window position
+shift + cmd - h : yabai -m window --warp west
+shift + cmd - j : yabai -m window --warp south
+shift + cmd - k : yabai -m window --warp north
+shift + cmd - l : yabai -m window --warp east
+# increase window size
+shift + alt - i : yabai -m window --resize left:-20:0
+shift + alt - o : yabai -m window --resize right:20:0
+shift + alt - t : yabai -m window --resize top:0:-20
+
+### Focus display
+
+# send window to monitor and follow focus
+ctrl + cmd - 0 : yabai -m window --display next; yabai -m display --focus next
+ctrl + cmd - 1 : yabai -m window --display 1; yabai -m display --focus 1
+ctrl + cmd - 2 : yabai -m window --display 2; yabai -m display --focus 2
+
+### Focus window
+
+# focus first or last window in window tree (options: first, last)
+shift + alt - 1: yabai -m window --focus first
+shift + alt - 2: yabai -m window --focus last
+
+# focus window in direction of focused window (options: north, east, south, west)
+shift + alt - 5: yabai -m window --focus west
+shift + alt - 6: yabai -m window --focus east
+
+# focus window that was previously focused
+shift + alt - r : yabai -m window --focus recent
+
+# balance size of windows
+shift + alt - 0 : yabai -m space --balance
+
+# toggle window split type
+shift + alt - s : yabai -m window --toggle split
+
+# toggle window zoom
+shift + alt - z : yabai -m window --toggle zoom-fullscreen
+
+# Rotate the window tree clock-wise (options: 90, 180, 270 degree)
+shift + alt - d : yabai -m space --rotate 90
+
+# swap managed window
+shift + alt - h : yabai -m window --swap north
+shift + alt - k : yabai -m window --swap east
+
+# prevents skhd from monitoring events for listed processes.
+
+.blacklist [
+    "terminal"
+    "qutebrowser"
+    "kitty"
+    "google chrome"
+]
