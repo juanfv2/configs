@@ -21,3 +21,10 @@ vim.keymap.set("n", "jk", "A;<esc>", options)
 -- duplicate lines, works in visual mode as well.
 vim.keymap.set("n", "00", "yyp", options)
 vim.keymap.set("v", "00", "y`>pgv", options)
+
+vim.keymap.set("n", "<leader>ter", ":ToggleTerm<cr>", options)
+
+vim.keymap.set("n", "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+vim.keymap.set("n", "<C-S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+vim.keymap.set("n", "<C-S-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<C-S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })

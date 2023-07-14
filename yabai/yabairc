@@ -31,7 +31,5 @@ yabai -m mouse_drop_action swap
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Microsoft Remote Desktop$" manage=off
 
-yabai -m rule --add app="^iTerm2$"           window space --focus 1
-yabai -m rule --add app="^Microsoft Teams$" space=2
-yabai -m rule --add app="^Brave Browser$" space=4
