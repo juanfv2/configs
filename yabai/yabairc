@@ -32,4 +32,9 @@ yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Microsoft Remote Desktop$" manage=off
+yabai -m rule --add app="^DBeaver$" manage=off
+yabai -m rule --add app="^MySQLWorkbench$" manage=off
+yabai -m rule --add app="^DbVisualizer$" manage=off
+yabai -m rule --add app="^Beekeeper Studio$" manage=off
+
 

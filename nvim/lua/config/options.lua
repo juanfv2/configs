@@ -7,6 +7,8 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldenable = false
 vim.opt.foldlevel = 99
 
+vim.lsp.buf.format({ timeout_ms = 2000 }) -- 2 seconds
+
 -- zM: Closes recursively the root folds and all their children
 -- zm: Increases the foldlevel by one, i.e. closes the innermost level of folds that are not yet folded
 -- The opposite commands are:
