@@ -7,11 +7,11 @@ local options = {
 }
 
 vim.keymap.set("n", "<leader><esc>", ":nohlsearch<cr>", options)
-vim.keymap.set("n", "<leader>y", '"*y', { noremap = true, silent = true, desc = "Yank into in mark" })
+vim.keymap.set("n", "<leader>y", '"*y', { noremap = true, silent = true, desc = "Yank into mark" })
 vim.keymap.set("n", "<leader>p", '"*p', { noremap = true, silent = true, desc = "Paste from mark" })
 vim.keymap.set("n", "ww¡", ":%y<cr>", { noremap = true, silent = true, desc = "Yank all content file" })
-vim.keymap.set("n", "ww'", "ggVGp", { noremap = true, silent = true, desc = "Replace/Paste all content file" })
-vim.keymap.set("n", "ww0", ":%d<cr>", { noremap = true, silent = true, desc = "Delete all content" })
+vim.keymap.set("n", "ww'", "ggVGp:w<cr>", { noremap = true, silent = true, desc = "Replace/Paste all content file" })
+vim.keymap.set("n", "ww0", ":%d<cr>:w<cr>", { noremap = true, silent = true, desc = "Delete all content" })
 vim.keymap.set("i", "jj", "<ESC>", options)
 
 -- add semi-colon to end of line

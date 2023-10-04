@@ -4,6 +4,7 @@
 export E=/Volumes/jfv2
 export EHOME=$E$HOME
 export DC=/Volumes/jfv3_c/
+export OPENAI_API_KEY=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
 
 ## Symbolic links
 
