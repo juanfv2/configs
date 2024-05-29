@@ -1,15 +1,14 @@
-# ISOLATED_PHP_VERSION=php@8.1
 server {
     listen 127.0.0.1:80;
     #listen 127.0.0.1:80; # valet loopback
-    server_name ransa-visor.test www.ransa-visor.test *.ransa-visor.test;
+    server_name iexca-10.test www.iexca-10.test *.iexca-10.test;
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 127.0.0.1:443 ssl http2;
     #listen 127.0.0.1:443 ssl http2; # valet loopback
-    server_name ransa-visor.test www.ransa-visor.test *.ransa-visor.test;
+    server_name iexca-10.test www.iexca-10.test *.iexca-10.test;
     root /;
     charset utf-8;
     client_max_body_size 512M;
@@ -21,8 +20,8 @@ server {
         try_files $uri $uri/;
     }
 
-    ssl_certificate "/Users/juan/.config/valet/Certificates/ransa-visor.test.crt";
-    ssl_certificate_key "/Users/juan/.config/valet/Certificates/ransa-visor.test.key";
+    ssl_certificate "/Users/juan/.config/valet/Certificates/iexca-10.test.crt";
+    ssl_certificate_key "/Users/juan/.config/valet/Certificates/iexca-10.test.key";
 
     location / {
         rewrite ^ "/Users/juan/.composer/vendor/laravel/valet/server.php" last;
@@ -38,7 +37,7 @@ server {
 
     location ~ [^/]\.php(/|$) {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass "unix:/Users/juan/.config/valet/valet81.sock";
+        fastcgi_pass "unix:/Users/juan/.config/valet/valet.sock";
         fastcgi_index "/Users/juan/.composer/vendor/laravel/valet/server.php";
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME "/Users/juan/.composer/vendor/laravel/valet/server.php";
@@ -53,7 +52,7 @@ server {
 server {
     listen 127.0.0.1:60;
     #listen 127.0.0.1:60; # valet loopback
-    server_name ransa-visor.test www.ransa-visor.test *.ransa-visor.test;
+    server_name iexca-10.test www.iexca-10.test *.iexca-10.test;
     root /;
     charset utf-8;
     client_max_body_size 128M;
@@ -80,7 +79,7 @@ server {
 
     location ~ [^/]\.php(/|$) {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass "unix:/Users/juan/.config/valet/valet81.sock";
+        fastcgi_pass "unix:/Users/juan/.config/valet/valet.sock";
         fastcgi_index "/Users/juan/.composer/vendor/laravel/valet/server.php";
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME "/Users/juan/.composer/vendor/laravel/valet/server.php";

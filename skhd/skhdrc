@@ -3,43 +3,4 @@
 ctrl + cmd - h : open -a /Applications/iTerm.app
 ctrl + cmd - j : open -a /Applications/Brave\ Browser.app
 ctrl + cmd - k : open -a /Applications/Visual\ Studio\ Code.app
-ctrl + cmd - l : open -a /Applications/Microsoft\ Teams.app
-
-## change window-panel focus within space
-
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - h : yabai -m window --focus west
-alt - l : yabai -m window --focus east
-alt - t : yabai -m window --toggle zoom-fullscreen  # maximize a window
-alt - i : yabai -m space  --balance                 # balance out tree of windows (resize to occupy same area)
-
-## Shortcuts For Modifying The Layout
-
-shift + alt - r : yabai -m space --rotate 270                       # rotate layout clockwise
-shift + alt - y : yabai -m space --mirror y-axis                    # flip along y-axis
-shift + alt - x : yabai -m space --mirror x-axis                    # flip along x-axis
-shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2 # toggle window float
-
-## move window to prev and next space (desktops)
-
-shift + alt - p : yabai -m window --space prev
-shift + alt - n : yabai -m window --space next
-
-## move window to display left and right (monitors)
-
-shift + alt - w : yabai -m window --display west; yabai -m display --focus west;
-shift + alt - e : yabai -m window --display east; yabai -m display --focus east;
-
-## change focus to display left and right (monitors)
-
-ctrl + alt - w : yabai -m display --focus west
-ctrl + alt - e : yabai -m display --focus east
-
-## stop/start/restart yabai
-
-ctrl + alt - q : yabai --stop-service
-ctrl + alt - s : yabai --start-service
-ctrl + alt - r : yabai --restart-service
-
-###
+# <!-- ctrl + cmd - l : open -a /Applications/Cursor.app -->
