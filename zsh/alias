@@ -18,8 +18,9 @@ alias cleanxcode='rm -frdv ~/Library/Developer/Xcode/DerivedData && sudo rm -frd
 alias cleancode='rm -frdv ~/Library/Application\ Support/Code/User/workspaceStorage'
 alias cleanmac='sudo rm -rfv ~/Library/Caches/ && sudo rm -rfv /Library/Caches/ && sudo rm -frdv /.Spotlight-V100'
 
-alias move-all='rsync -rv --remove-source-files /Users/juan/Desktop/* /Volumes/jfv1/Desktop && rsync -rv --remove-source-files /Users/juan/Documents/* /Volumes/jfv1/Documents && rsync -rv --remove-source-files /Users/juan/Downloads/* /Volumes/jfv1/Downloads'
-alias move-wsp='rsync -rv --remove-source-files /Users/juan/workspace/* /Volumes/jfv1/workspace'
+alias move-all='rsync -rv --remove-source-files /Users/juan/Desktop/* /Volumes/jfv1_a/Desktop && rsync -rv --remove-source-files /Users/juan/Documents/* /Volumes/jfv1_a/Documents && rsync -rv --remove-source-files /Users/juan/Downloads/* /Volumes/jfv1_a/Downloads'
+alias move-wsp='rsync -rv --remove-source-files /Users/juan/workspace/* /Volumes/jfv1_a/workspace'
+alias move-wsp='rsync -rv --remove-source-files /Users/juan/workspace/* /Volumes/jfv1_a/workspace'
 
 # mysql command
 
